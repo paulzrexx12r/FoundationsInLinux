@@ -1,0 +1,96 @@
+pacman -S --needed --noconfirm gc > /mnt/DATA/System/ArchLinux/Packages/006-001-gc 2>&1
+pacman -S --needed --noconfirm lua51 > /mnt/DATA/System/ArchLinux/Packages/006-002-lua51 2>&1
+pacman -S --needed --noconfirm lua > /mnt/DATA/System/ArchLinux/Packages/006-003-lua 2>&1
+pacman -S --needed --noconfirm git > /mnt/DATA/System/ArchLinux/Packages/006-004-git 2>&1
+pacman -S --needed --noconfirm slang > /mnt/DATA/System/ArchLinux/Packages/006-005-slang 2>&1
+pacman -S --needed --noconfirm lmdb > /mnt/DATA/System/ArchLinux/Packages/006-006-lmdb 2>&1
+pacman -S --needed --noconfirm binutils > /mnt/DATA/System/ArchLinux/Packages/006-007-binutils 2>&1
+pacman -S --needed --noconfirm gcc > /mnt/DATA/System/ArchLinux/Packages/006-008-gcc 2>&1
+pacman -S --needed --noconfirm m4 > /mnt/DATA/System/ArchLinux/Packages/006-009-m4 2>&1
+pacman -S --needed --noconfirm autoconf > /mnt/DATA/System/ArchLinux/Packages/006-010-autoconf 2>&1
+pacman -S --needed --noconfirm guile > /mnt/DATA/System/ArchLinux/Packages/004-011-guile 2>&1
+pacman -S --needed --noconfirm make > /mnt/DATA/System/ArchLinux/Packages/006-012-make 2>&1
+pacman -S --needed --noconfirm automake > /mnt/DATA/System/ArchLinux/Packages/006-013-automake 2>&1
+pacman -S --needed --noconfirm bison > /mnt/DATA/System/ArchLinux/Packages/006-014-bison 2>&1
+pacman -S --needed --noconfirm lua52 > /mnt/DATA/System/ArchLinux/Packages/006-015-lua52 2>&1
+
+
+
+
+
+
+pacman -S --noconfirm apr  > /mnt/DATA/System/ArchLinux/Packages/005-001-apr 2>&1
+pacman -S --noconfirm apr-util > /mnt/DATA/System/ArchLinux/Packages/005-002-apr-util 2>&1
+pacman -S --noconfirm asp > /mnt/DATA/System/ArchLinux/Packages/005-003-asp 2>&1
+pacman -S --noconfirm cgit > /mnt/DATA/System/ArchLinux/Packages/005-004-cgit 2>&1
+pacman -S --noconfirm clang > /mnt/DATA/System/ArchLinux/Packages/005-005-clang 2>&1
+pacman -S --noconfirm clisp > /mnt/DATA/System/ArchLinux/Packages/005-006-clisp 2>&1
+pacman -S --noconfirm cmake > /mnt/DATA/System/ArchLinux/Packages/005-007-cmake 2>&1
+pacman -S --noconfirm cvs > /mnt/DATA/System/ArchLinux/Packages/005-008-cvs 2>&1
+pacman -S --noconfirm ed > /mnt/DATA/System/ArchLinux/Packages/005-009-ed 2>&1
+pacman -S --noconfirm extra-cmake-modules > /mnt/DATA/System/ArchLinux/Packages/005-010-extra-cmake-modules 2>&1
+pacman -S --noconfirm gcc-fortran > /mnt/DATA/System/ArchLinux/Packages/005-011-gcc-fortran 2>&1
+pacman -S --noconfirm gcc-objc > /mnt/DATA/System/ArchLinux/Packages/005-012-gcc-objc 2>&1
+pacman -S --noconfirm gdb > /mnt/DATA/System/ArchLinux/Packages/005-013-gdb 2>&1
+pacman -S --noconfirm gitolite > /mnt/DATA/System/ArchLinux/Packages/005-014-gitolite 2>&1
+pacman -S --noconfirm go > /mnt/DATA/System/ArchLinux/Packages/005-015-go 2>&1
+pacman -S --noconfirm go-bindata > /mnt/DATA/System/ArchLinux/Packages/005-016-go-bindata 2>&1
+pacman -S --noconfirm go-tools > /mnt/DATA/System/ArchLinux/Packages/005-017-go-tools 2>&1
+pacman -S --noconfirm llvm > /mnt/DATA/System/ArchLinux/Packages/005-018-llvm 2>&1
+pacman -S --noconfirm lua-filesystem > /mnt/DATA/System/ArchLinux/Packages/005-019-lua-filesystem 2>&1
+pacman -S --noconfirm libnet > /mnt/DATA/System/ArchLinux/Packages/005-020-libnet 2>&1
+pacman -S --noconfirm libutf8proc > /mnt/DATA/System/ArchLinux/Packages/005-021-libutf8proc 2>&1
+pacman -S --noconfirm libyaml > /mnt/DATA/System/ArchLinux/Packages/005-022-libyaml 2>&1
+pacman -S --noconfirm libzip > /mnt/DATA/System/ArchLinux/Packages/005-023-libzip 2>&1
+pacman -S --noconfirm mercurial > /mnt/DATA/System/ArchLinux/Packages/005-024-mercurial 2>&1
+pacman -S --noconfirm mime-types > /mnt/DATA/System/ArchLinux/Packages/005-025-mime-types 2>&1
+pacman -S --noconfirm namcap > /mnt/DATA/System/ArchLinux/Packages/005-026-namcap 2>&1
+pacman -S --noconfirm nasm > /mnt/DATA/System/ArchLinux/Packages/005-027-nasm 2>&1
+pacman -S --noconfirm ocaml > /mnt/DATA/System/ArchLinux/Packages/005-028-ocaml 2>&1
+pacman -S --noconfirm openblas > /mnt/DATA/System/ArchLinux/Packages/005-029-openblas 2>&1
+pacman -S --noconfirm openmp > /mnt/DATA/System/ArchLinux/Packages/005-030-openmp 2>&1
+pacman -S --noconfirm pkgdiff > /mnt/DATA/System/ArchLinux/Packages/005-031-pkgdiff 2>&1
+pacman -S --noconfirm r > /mnt/DATA/System/ArchLinux/Packages/005-032-r 2>&1
+pacman -S --noconfirm rhash > /mnt/DATA/System/ArchLinux/Packages/005-033-rhash 2>&1
+pacman -S --noconfirm rlwrap > /mnt/DATA/System/ArchLinux/Packages/005-034-rlwrap 2>&1
+pacman -S --noconfirm scons > /mnt/DATA/System/ArchLinux/Packages/005-035-scons 2>&1
+pacman -S --noconfirm serf > /mnt/DATA/System/ArchLinux/Packages/005-036-serf 2>&1
+pacman -S --noconfirm sip > /mnt/DATA/System/ArchLinux/Packages/005-037-sip 2>&1
+pacman -S --noconfirm subversion > /mnt/DATA/System/ArchLinux/Packages/005-038-subversion 2>&1
+pacman -S --noconfirm tinyxml2 > /mnt/DATA/System/ArchLinux/Packages/005-039-tinyxml2 2>&1
+pacman -S --noconfirm tk > /mnt/DATA/System/ArchLinux/Packages/005-040-tk 2>&1
+pacman -S --noconfirm unixodbc > /mnt/DATA/System/ArchLinux/Packages/005-041-unixodbc 2>&1
+pacman -S --noconfirm vtk > /mnt/DATA/System/ArchLinux/Packages/005-042-vtk 2>&1
+pacman -S --noconfirm xmlto > /mnt/DATA/System/ArchLinux/Packages/005-043-xmlto 2>&1
+####################################################################################################################################
+pkgfile --update
+# : Updating 4 repos...
+#   download complete: multilib             [   280.9 KiB   635K/s  3 remaining]
+#   download complete: core                 [   805.6 KiB   848K/s  2 remaining]
+#   download complete: extra                [     7.8 MiB  2.85M/s  1 remaining]
+#   download complete: community            [    18.4 MiB  3.54M/s  0 remaining]
+# :: download complete in 5.19s             <    27.3 MiB  5.25M/s  4 files    >
+# :: waiting for 1 process to finish repacking repos...
+java-runtime-common
+# For the complete set of Java binaries to be available in your PATH,
+# you need to re-login or source /etc/profile.d/jre.sh
+# Please note that this package does not support forcing JAVA_HOME as former package java-common did
+#
+cgit
+# ==> cgit looks at /etc/cgitrc for configuration. There is
+# ==> an example configuration file in the cgitrc(5) man page.
+#
+************************************************************************************************************************************
+# DEVELOPMENT - INFORMATION
+pkgfile...
+==> Run 'pkgfile --update' to initialize the database
+
+cgit...
+changed ownership of 'var/cache/cgit' from root:root to http:http
+==> cgit looks at /etc/cgitrc for configuration. There is
+==> an example configuration file in the cgitrc(5) man page.
+
+:: Running post-transaction hooks...
+(1/3) Reloading system manager configuration...
+(2/3) Arming ConditionNeedsUpdate...
+(3/3) Updating the info directory file...

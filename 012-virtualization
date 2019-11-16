@@ -1,0 +1,246 @@
+_now=$(date +"%Y%m%d%H:00")
+echo 'y' | pacman -S bridge-utils libvirt gtk-update-icon-cache adwaita-icon-theme atk at-spi2-core dbus-broker at-spi2-atk cantarell-fonts \
+                     dconf libgudev libgusb colord libxinerama libxrandr libxxf86vm argyllcms libexif libgphoto2 libieee1284 v4l-utils sane \
+                     colord-sane gsettings-desktop-schemas libproxy glib-networking json-glib libcacard sound-theme-freedesktop libcanberra \
+                     libcanberra-pulse gstreamer libcanberra-gstreamer libdrm libepoxy libomxil-bellagio osinfo-db libosinfo libsoup \
+                     libvirt-glib libvirt-python2 libxcomposite libxcursor libxdamage xkeyboard-config libxkbcommon libxshmfence opus usbredir \
+                     vte-common wayland wayland-protocols phodav mesa mesa-vdpau libva-mesa-driver rest gtk-vnc spice-gtk vte3 libmm-glib \
+                     geoclue2 iso-codes libxv orc gst-plugins-base-libs hyphen woff2 webkit2gtk gst-libav graphene libtheora libvisual \
+                     gst-plugins-base aalib libsamplerate zita-alsa-pcmi zita-resampler jack libraw1394 libavc1394 libcaca libdv \
+                     libiec61883 speexdsp speex libshout libvpx mpg123 taglib twolame wavpack gst-plugins-good virt-install \
+                     virt-manager virt-viewer celt libibus libnfs sdl2 seabios celt0.5.1 spice vde2 virglrenderer qemu \
+                     qemu-arch-extra libiscsi qemu-block-iscsi qemu-block-rbd lxc docker  \
+                     --needed \
+                     > /mnt/DATA/System/ArchLinux/Packages/$_now._12virtualization 2>&1
+####################################################################################################################################
+vmware-workstation # [NOT FOUND][AUR]
+************************************************************************************************************************************
+# VIRTUALIZATION - OPTIONAL INFORMATION
+libvirt...
+>>> libvirt runs qemu from nobody:kvm by default
+>>> change the USER if desired in /etc/libvirt/qemu.conf
+>>> See https://wiki.archlinux.org/index.php/Libvirt for more info
+
+vde2...
+vde config files should be placed in /etc/vde, sample files are provided.
+iptables and dhcpd sample files have been installed to '/usr/share/vde2'.
+Merge those examples, if needed to the according config files.
+
+:: Running post-transaction hooks...
+( 1/10) Compiling GSettings XML schema files...
+( 2/10) Updating icon theme caches...
+( 3/10) Reloading system manager configuration...
+( 4/10) Applying kernel sysctl settings...
+( 5/10) Creating system user accounts...
+( 6/10) Creating temporary files...
+( 7/10) Reloading device manager configuration...
+( 8/10) Arming ConditionNeedsUpdate...
+( 9/10) Updating the desktop file MIME type cache...
+(10/10) Updating the MIME type database...
+####################################################################################################################################
+systemctl start libvirtd.service
+#
+systemctl enable libvirtd.service
+# Created symlink /etc/systemd/system/multi-user.target.wants/libvirtd.service -> /usr/lib/systemd/system/libvirtd.service.
+# Created symlink /etc/systemd/system/sockets.target.wants/virtlockd.socket -> /usr/lib/systemd/system/virtlockd.socket.
+# Created symlink /etc/systemd/system/sockets.target.wants/virtlogd.socket -> /usr/lib/systemd/system/virtlogd.socket.
+####################################################################################################################################
+virsh list --all
+#  Id   Name   State
+# --------------------
+virsh net-list --all
+#  Name                 State      Autostart     Persistent
+# ----------------------------------------------------------
+#  default              inactive   no            yes
+brctl show
+#
+ip a | grep virbr0
+#
+ifconfig | grep -A 7 virbr0
+#
+virsh net-info default
+# Name:           default
+# UUID:           010d682a-1686-4276-9a91-4653198a0029
+# Active:         no
+# Persistent:     yes
+# Autostart:      yes
+# Bridge:         virbr0
+virsh net-autostart default
+# Network default marked as autostarted
+virsh net-start default
+# Network default started
+virsh net-list --all
+#  Name                 State      Autostart     Persistent
+# ----------------------------------------------------------
+#  default              active     yes           yes
+brctl show
+# bridge name     bridge id               STP enabled     interfaces
+# virbr0          8000.5254001f8be6       yes             virbr0-nic
+ip a | grep virbr0
+# 4: virbr0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default qlen 1000
+#     inet 192.168.122.1/24 brd 192.168.122.255 scope global virbr0
+# 5: virbr0-nic: <BROADCAST,MULTICAST> mtu 1500 qdisc fq_codel master virbr0 state DOWN group default qlen 1000
+ifconfig | grep -A 7 virbr0
+# virbr0: flags=4099<UP,BROADCAST,MULTICAST>  mtu 1500
+#         inet 192.168.122.1  netmask 255.255.255.0  broadcast 192.168.122.255
+#         ether 52:54:00:1f:8b:e6  txqueuelen 1000  (Ethernet)
+#         RX packets 0  bytes 0 (0.0 B)
+#         RX errors 0  dropped 0  overruns 0  frame 0
+#         TX packets 0  bytes 0 (0.0 B)
+#         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+####################################################################################################################################
+# If the default network is missing, create /tmp/default.xml with the following contents. (Optionally, use DHCP host entries to always assign
+# the same IP address to a particular VM.)
+#
+# <network>
+#   <name>default</name>
+#   <bridge name="virbr0"/>
+#   <forward mode="nat"/>
+#   <ip address="192.168.122.1" netmask="255.255.255.0">
+#     <dhcp>
+#       <range start="192.168.122.2" end="192.168.122.254"/>
+#     </dhcp>
+#   </ip>
+# </network>
+#
+virsh net-define /tmp/default.xml
+#
+virsh net-start default
+#
+virsh net-autostart default
+####################################################################################################################################
+osinfo-query os
+#
+qemu-img create -f qcow2 /mnt/VM/artix.qcow2 40G
+# Formatting '/mnt/VM/artix.qcow2', fmt=qcow2 size=42949672960 cluster_size=65536 lazy_refcounts=off refcount_bits=16
+
+virt-install \
+--name=Artix \
+--vcpus=4 \
+--memory=8192 \
+--os-type linux \
+--os-variant altlinux7.0 \
+--cdrom=/mnt/DATA/Software/ARTIX/artix-lxqt-openrc-20181008-x86_64.iso \
+--disk path=/mnt/VM/artix.qcow2 \
+--network bridge=virbr0 \
+--graphics spice
+
+# Starting install...
+#
+# (virt-viewer:12137): GSpice-WARNING **: 18:04:41.839: Could not create org.gnome.SessionManager dbus proxy: Error spawning command line ?dbus-launch --autolaunch=42c76ae428e3435293120ce750cd2468 --binary-syntax --close-stderr?: Child process exited with code 1
+#
+# (virt-viewer:12137): GSpice-WARNING **: 18:04:41.840: Warning no automount-inhibiting implementation available
+#
+# Domain creation completed.
+# Restarting guest.
+#
+# (virt-viewer:12818): GSpice-WARNING **: 18:21:47.678: Could not create org.gnome.SessionManager dbus proxy: Error spawning command line ?dbus-launch --autolaunch=42c76ae428e3435293120ce750cd2468 --binary-syntax --close-stderr?: Child process exited with code 1
+#
+# (virt-viewer:12818): GSpice-WARNING **: 18:21:47.678: Warning no automount-inhibiting implementation available
+qemu-img create -f qcow2 /mnt/VM/void.qcow2 40G
+# Formatting '/mnt/VM/void.qcow2', fmt=qcow2 size=42949672960 cluster_size=65536 lazy_refcounts=off refcount_bits=16
+
+virt-install \
+--name=Void \
+--vcpus=4 \
+--memory=8192 \
+--os-type linux \
+--os-variant altlinux7.0 \
+--cdrom=/mnt/DATA/Software/VOID/void-live-x86_64-musl-20181111-lxqt.iso \
+--disk path=/mnt/VM/void.qcow2 \
+--network bridge=virbr0 \
+--graphics spice
+#
+# Starting install...
+#
+# (virt-viewer:13232): GSpice-WARNING **: 18:28:05.267: Could not create org.gnome.SessionManager dbus proxy: Error spawning command line ?dbus-launch --autolaunch=42c76ae428e3435293120ce750cd2468 --binary-syntax --close-stderr?: Child process exited with code 1
+#
+# (virt-viewer:13232): GSpice-WARNING **: 18:28:05.268: Warning no automount-inhibiting implementation available
+# Domain creation completed.
+# Restarting guest.
+#
+# (virt-viewer:14729): GSpice-WARNING **: 18:58:03.588: Could not create org.gnome.SessionManager dbus proxy: Error spawning command line ?dbus-launch --autolaunch=42c76ae428e3435293120ce750cd2468 --binary-syntax --close-stderr?: Child process exited with code 1
+#
+# (virt-viewer:14729): GSpice-WARNING **: 18:58:03.589: Warning no automount-inhibiting implementation available
+######################################################################################################################################################
+cd /mnt/VM
+#
+wget https://cgit.kde.org/docker-neon.git/plain/neondocker/neondocker.rb
+#
+# --2018-07-07 14:54:40--  https://cgit.kde.org/docker-neon.git/plain/neondocker/neondocker.rb
+# Loaded CA certificate '/etc/ssl/certs/ca-certificates.crt'
+# Resolving cgit.kde.org (cgit.kde.org)... 103.28.250.218
+# Connecting to cgit.kde.org (cgit.kde.org)|103.28.250.218|:443... connected.
+# HTTP request sent, awaiting response... 200 OK
+# Length: 7428 (7.3K) [text/plain]
+# Saving to: 'neondocker.rb'
+#
+# neondocker.rb                              100%[========================================================================================>]   7.25K  --.-KB/s    in 0s
+#
+# 2018-07-07 14:54:42 (16.6 MB/s) - 'neondocker.rb' saved [7428/7428]
+#
+#
+chmod +x -v neondocker.rb
+# mode of 'neondocker.rb' changed from 0644 (rw-r--r--) to 0755 (rwxr-xr-x)
+gem install docker-api
+# Fetching: excon-0.62.0.gem (100%)
+# WARNING:  You don't have /root/.gem/ruby/2.5.0/bin in your PATH,
+#           gem executables will not run.
+# Successfully installed excon-0.62.0
+# Fetching: multi_json-1.13.1.gem (100%)
+# Successfully installed multi_json-1.13.1
+# Fetching: docker-api-1.34.2.gem (100%)
+# Successfully installed docker-api-1.34.2
+# ERROR:  While executing gem ... (Gem::DocumentError)
+#     RDoc is not installed: cannot load such file -- rdoc/rdoc
+pacman -S ruby-dev
+# error: target not found: ruby-dev
+usermod -aG docker paularchlinux
+#
+newgrp -v docker
+#
+systemctl start docker.service
+#
+systemctl enable docker.service
+# Created symlink /etc/systemd/system/multi-user.target.wants/docker.service -> /usr/lib/systemd/system/docker.service.
+docker pull kdeneon/plasma:dev-unstable
+# dev-unstable: Pulling from kdeneon/plasma
+# 6b98dfc16071: Pull complete
+# 4001a1209541: Pull complete
+# 6319fc68c576: Pull complete
+# b24603670dc3: Pull complete
+# 97f170c87c6f: Pull complete
+# d080d446cabf: Pull complete
+# 3c332e7c79b2: Pull complete
+# c218f435713b: Pull complete
+# 9165c271798f: Pull complete
+# e0ec5b8c70c3: Pull complete
+# 58c10457d591: Pull complete
+# Digest: sha256:7f47ec2d216d5678a9ea5606f9f30a21fa733b7261243d918a224def12bc5454
+# Status: Downloaded newer image for kdeneon/plasma:dev-unstable
+docker images
+# REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+# kdeneon/plasma      dev-unstable        c0ca16fa580b        5 hours ago         2.6GB
+./neondocker.rb
+# checking for Xephyr... yes
+# The XKEYBOARD keymap compiler (xkbcomp) reports:
+# > Warning:          Unsupported high keycode 372 for name <I372> ignored
+# >                   X11 cannot support keycodes above 255.
+# >                   This warning only shows for the first high keycode.
+# Errors from xkbcomp are not fatal to the X server
+Xephyr -screen 1024x768 :1 &
+docker run -v kdeneon/plasma:dev-unstable
+####################################################################################################################################
+cd /mnt/VM
+#
+docker pull archlinux/base
+# Using default tag: latest
+# latest: Pulling from archlinux/base
+# 16f1fba3092b: Pull complete
+# Digest: sha256:abf3fe6e04c26889d25386f01e3c90ad1e1c6d97f47b3c1aed0ed43d724f92e6
+# Status: Downloaded newer image for archlinux/base:latest
+docker images
+# REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+# kdeneon/plasma      dev-unstable        c0ca16fa580b        5 hours ago         2.6GB
+# archlinux/base      latest              4702f86ec64f        7 days ago          417MB
+docker run -t -i --rm archlinux/base /bin/bash

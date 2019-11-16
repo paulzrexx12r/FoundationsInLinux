@@ -1,0 +1,41 @@
+_now=$(date +"%Y%m%d%H:00")
+#
+printf "%s\n" "1" "y" | pacman -S git bridge-utils docker rsync wget lxc pigz gperftools desktop-file-utils xaw3d gv libstemmer lsb-release snappy \
+                                  wiredtiger yaml-cpp mongodb mongodb-tools ansible sshpass acme-tiny jre8-openjdk-headless xorg-xset xdg-utils \
+                                  jre8-openjdk icedtea-web java-jline rhino jenkins unzip monitoring-plugins nginx fcgi fcgiwrap elasticsearch logstash \
+                                  c-ares http-parser nodejs semver node-gyp npm kibana monit consul collectd libdbi libesmtp libnotify openipmi liboping \
+                                  libfontenc xorg-fonts-encodings xorg-mkfontscale xorg-mkfontdir ttf-dejavu ttf-dejavu rrdtool lm_sensors augeas leveldb \
+                                  xmlsec oath-toolkit ceph-libs liburcu rpcbind glusterfs js52  libpciaccess netcf numactl parted polkit yajl libvirt \
+                                  ebtables netcat radvd dmidecode ceph qemu-block-gluster libatasmart protobuf protobuf-c libwebsockets mosquitto \
+                                  libmicrohttpd gradle facter hiera puppet ruby-shadow  \
+                                  --needed \
+                                  > /mnt/DATA/System/ArchLinux/Packages/$_now._14devops 2>&1
+####################################################################################################################################
+nagios # [NOT FOUND][AUR]
+#
+splunk-forwarder # [NOT FOUND][AUR]
+#
+kubernetes # [NOT FOUND][AUR]
+#
+webmin # [NOT FOUND][AUR]
+************************************************************************************************************************************
+# DEVOPS - OPTIONAL INFORMATION
+splunk-forwarder
+# Splunk forwarder has been installed to /opt/splunkforwarder
+# You can start Splunk by running 'systemctl start splunkforwarder'
+
+:: Running post-transaction hooks...
+(1/8) Warn about old perl modules
+(2/8) Reloading system manager configuration...
+(3/8) Applying kernel sysctl settings...
+(4/8) Creating system user accounts...
+(5/8) Creating temporary files...
+error: command failed to execute correctly
+(6/8) Arming ConditionNeedsUpdate...
+(7/8) Updating the info directory file...
+(8/8) Updating the desktop file MIME type cache...
+####################################################################################################################################
+systemctl start webmin.service
+#
+systemctl enable webmin.service
+# Created symlink /etc/systemd/system/multi-user.target.wants/webmin.service -> /usr/lib/systemd/system/webmin.service.

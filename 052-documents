@@ -1,0 +1,6 @@
+_now=$(date +"%Y%m%d%H:00")
+#
+echo "y"  | pacman -S linux-hardened-docs  ruby-docs  jsoncpp-doc  openjdk10-doc  python-lxml-docs  python-webob-docs  jasper-doc  groovy-docs  \
+                      opengl-man-pages  imagemagick-doc  xorg-docs  \
+                      --needed  \
+                      > /mnt/DATA/System/ArchLinux/Packages/$_now._995documentation 2>&1

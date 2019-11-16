@@ -1,0 +1,86 @@
+pacman -S kinfocenter systemsettings ksystemlog ksysguard kross quota-tools kpmcore  partitionmanager kdf kgpg \
+                                       galera perl-dbd-mysql libmspack postgresql clamav cairo-perl geoclue2 glib-perl gnome-icon-theme \
+                                       gnome-icon-theme-symbolic gtk2 gtk2-perl pango-perl webkit2gtk woff2 zenity clamtk keepassxc \
+                                       keepassxc k3b cdrtools dvd+rw-tools vcdimager emovix cdrdao cdparanoia transcode konsole dolphin \
+                                       firefox chromium pepper-flash flashplugin falkon python-pyside2 qt5-websockets qt5-datavis3d \
+                                       qt5-scxml qt5-charts qt5-3d mutt smtp-forwarder akregator kdepim-addons konversation kopete \
+                                       mediastreamer spectacle okular calibre python2-genshi python2-beautifulsoup4 tk python2-olefile \
+                                       python2-opengl qt5-serialport qt5-connectivity qt5-networkauth ipython2 wxpython python2-nose krita \
+                                       opencolorio krita-plugin-gmic opencv-samples hdf5 opencl-icd-loader opencl-driver opencl-headers \
+                                       python-numpy python-nose openblas python2-numpy libheif gimp gutenprint foomatic-db-gutenprint-ppds \
+                                       cantata soundkonverter fluidsynth mac mplayer opus-tools timidity++ xaw3d vorbisgain vorbis-tools \
+                                       sox opusfile libdvdcss vlc phonon-qt5 phonon-qt5-gstreamer phonon-qt5-vlc kaffeine kamoso kate emacs \
+                                       okteta kdiff3 eric cmake kdbg qt5ct qt5-base jre10-openjdk-headless java-rhino jre10-openjdk \
+                                       jdk10-openjdk openjdk10-src netbeans groovy cuda qgit source-highlight ekiga tigervnc wireshark-qt \
+                                       khelpcenter libreoffice eclipse sagemath knights gnuplot
+####################################################################################################################################
+qdirstat # [NOT FOUND][AUR]
+#
+imagewriter # [NOT FOUND][AUR]
+#
+rclone-browser # [NOT FOUND][AUR]
+#
+google-earth-pro # [NOT FOUND][AUR]
+#
+android-studio # [NOT FOUND][AUR]
+#
+perl-authen-pam # [NOT FOUND][AUR]
+#
+perl-encode-detect # [NOT FOUND][AUR]
+#
+skype  # [NOT FOUND][AUR]
+************************************************************************************************************************************
+# KDE-APPLICATIONS - INFORMATION
+nvidia-utils...
+If you run into trouble with CUDA not being available, run nvidia-modprobe first.
+
+postgresql...
+passwd: nscd did not terminate normally (signal 11)
+passwd: nscd did not terminate normally (signal 11)
+passwd: nscd did not terminate normally (signal 11)
+passwd: nscd did not terminate normally (signal 11)
+
+mozilla-common...
+relogin or source /etc/profile.d/mozilla-common.sh
+
+cups...
+>> If you use an HTTPS connection to CUPS, the first time you access
+>> the interface it may take a very long time before the site comes up.
+>> This is because the first request triggers the generation of the CUPS
+>> SSL certificates which can be a very time-consuming job.
+
+
+    gutenprint...
+>>please run /usr/bin/cups-genppdupdate
+>>and restart cups daemon
+
+
+java-runtime-common...
+For the complete set of Java binaries to be available in your PATH,
+you need to re-login or source /etc/profile.d/jre.sh
+Please note that this package does not support forcing JAVA_HOME as former package java-common did
+
+jre10-openjdk...
+when you use a non-reparenting window manager,
+set _JAVA_AWT_WM_NONREPARENTING=1 in /etc/profile.d/jre.sh
+
+cuda...
+The cuda binaries are in /opt/cuda/bin
+The cuda samples are in /opt/cuda/samples
+The cuda docs are in /opt/cuda/doc
+You need to relogin in order for the cuda binaries to appear in your PATH
+
+:: Running post-transaction hooks...
+( 1/13) Warn about old perl modules
+( 2/13) Installing GConf schemas...
+( 3/13) Updating GIO module cache...
+( 4/13) Updating icon theme caches...
+( 5/13) Reloading system manager configuration...
+( 6/13) Creating system user accounts...
+( 7/13) Creating temporary files...
+( 8/13) Reloading device manager configuration...
+( 9/13) Arming ConditionNeedsUpdate...
+(10/13) Updating the info directory file...
+(11/13) Updating the desktop file MIME type cache...
+(12/13) Updating the MIME type database...
+(13/13) Updating the vlc plugin cache...

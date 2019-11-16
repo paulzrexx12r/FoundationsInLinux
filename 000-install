@@ -1,0 +1,377 @@
+su root
+Password:
+#
+tar -xvf archlinux-bootstrap-2019.11.01-x86_64.tar.gz -C /mnt/KVMVM/
+#
+/mnt/KVMVM/root.x86_64/bin/arch-chroot /mnt/KVMVM/root.x86_64
+==> WARNING: /mnt/KVMVM/root.x86_64 is not a mountpoint. This may have undesirable side effects.
+#
+pacman-key --init
+gpg: /etc/pacman.d/gnupg/trustdb.gpg: trustdb created
+gpg: no ultimately trusted keys found
+gpg: starting migration from earlier GnuPG versions
+gpg: porting secret keys from '/etc/pacman.d/gnupg/secring.gpg' to gpg-agent
+gpg: migration succeeded
+gpg: Generating pacman keyring master key...
+gpg: key 94419AA259B9A8EF marked as ultimately trusted
+gpg: directory '/etc/pacman.d/gnupg/openpgp-revocs.d' created
+gpg: revocation certificate stored as '/etc/pacman.d/gnupg/openpgp-revocs.d/3792D8B31B609DB4E26CC01094419AA259B9A8EF.rev'
+gpg: Done
+==> Updating trust database...
+gpg: marginals needed: 3  completes needed: 1  trust model: pgp
+gpg: depth: 0  valid:   1  signed:   0  trust: 0-, 0q, 0n, 0m, 0f, 1u
+#
+pacman-key --populate archlinux
+==> Appending keys from archlinux.gpg...
+==> Locally signing trusted keys in keyring...
+  -> Locally signing key D8AFDDA07A5B6EDFA7D8CCDAD6D055F927843F1C...
+  -> Locally signing key DDB867B92AA789C165EEFA799B729B06A680C281...
+  -> Locally signing key 684148BB25B49E986A4944C55184252D824B18E8...
+  -> Locally signing key 91FFE0700E80619CEB73235CA88E23E377514E00...
+  -> Locally signing key 0E8B644079F599DFC1DDC3973348882F6AC6A4C2...
+  -> Locally signing key AB19265E5D7D20687D303246BA1DFB64FFF979E7...
+==> Importing owner trust values...
+==> Disabling revoked keys in keyring...
+  -> Disabling key 8F76BEEA0289F9E1D3E229C05F946DED983D4366...
+  -> Disabling key 63F395DE2D6398BBE458F281F2DBB4931985A992...
+  -> Disabling key 50F33E2E5B0C3D900424ABE89BDCF497A4BBCC7F...
+  -> Disabling key 27FFC4769E19F096D41D9265A04F9397CDFD6BB0...
+  -> Disabling key 39F880E50E49A4D11341E8F939E4F17F295AFBF4...
+  -> Disabling key 8840BD07FC24CB7CE394A07CCF7037A4F27FB7DA...
+  -> Disabling key 5559BC1A32B8F76B3FCCD9555FA5E5544F010D48...
+  -> Disabling key 0B20CA1931F5DA3A70D0F8D2EA6836E1AB441196...
+  -> Disabling key 07DFD3A0BC213FA12EDC217559B3122E2FA915EC...
+  -> Disabling key 4FCF887689C41B09506BE8D5F3E1D5C5D30DB0AD...
+  -> Disabling key 5A2257D19FF7E1E0E415968CE62F853100F0D0F0...
+  -> Disabling key 7FA647CD89891DEDC060287BB9113D1ED21E1A55...
+  -> Disabling key BC1FBE4D2826A0B51E47ED62E2539214C6C11350...
+  -> Disabling key 4A8B17E20B88ACA61860009B5CED81B7C2E5C0D2...
+  -> Disabling key 5696C003B0854206450C8E5BE613C09CB4440678...
+  -> Disabling key 8CF934E339CAD8ABF342E822E711306E3C4F88BC...
+  -> Disabling key F5A361A3A13554B85E57DDDAAF7EF7873CFD4BB6...
+  -> Disabling key 5E7585ADFF106BFFBBA319DC654B877A0864983E...
+  -> Disabling key 65EEFE022108E2B708CBFCF7F9E712E59AF5F22A...
+  -> Disabling key 40440DC037C05620984379A6761FAD69BA06C6A9...
+  -> Disabling key 34C5D94FE7E7913E86DC427E7FB1A3800C84C0A5...
+  -> Disabling key 81D7F8241DB38BC759C80FCE3A726C6170E80477...
+  -> Disabling key E7210A59715F6940CF9A4E36A001876699AD6E84...
+  -> Disabling key 5357F3B111688D88C1D88119FCF2CB179205AC90...
+  -> Disabling key FB871F0131FEA4FB5A9192B4C8880A6406361833...
+  -> Disabling key 66BD74A036D522F51DD70A3C7F2A16726521E06D...
+  -> Disabling key B1F2C889CB2CCB2ADA36D963097D629E437520BD...
+  -> Disabling key 9515D8A8EAB88E49BB65EDBCE6B456CAF15447D5...
+  -> Disabling key 40776A5221EF5AD468A4906D42A1DB15EC133BAD...
+  -> Disabling key D4DE5ABDE2A7287644EAC7E36D1A9E70E19DAA50...
+  -> Disabling key 44D4A033AC140143927397D47EFD567D4C7EA887...
+==> Updating trust database...
+gpg: next trustdb check due at 2019-10-03
+#
+mount -v /dev/VGARCHLINUX/LVARCHLINUX /mnt
+mount: /dev/mapper/VGARCHLINUX-LVARCHLINUX mounted on /mnt.
+#
+mkdir -v /DATA
+mkdir: created directory '/DATA'
+#
+mount -v /dev/VGSTORAGE/LVDATA /DATA
+mount: /dev/mapper/VGSTORAGE-LVDATA mounted on /DATA.
+#
+pacstrap /mnt base linux linux-firmware > /mnt/mnt/DATA/System/ArchLinux/Packages/000-000-pacstrap                                                                                                                        :(
+error: command failed to execute correctly
+pacstrap /mnt base linux linux-firmware >   37.88s user 8.73s system 34% cpu 2:16.09 total
+#
+mkdir -pv /mnt/boot/efi
+mkdir: created directory '/mnt/boot/efi'
+#
+mount -v /dev/nvme0n1p1 /mnt/boot/efi
+mount: /dev/nvme0n1p1 mounted on /mnt/boot/efi.
+#
+mkdir -pv /mnt/mnt/{ALPINE,ARCHIVE,BACKUP,BLACKARCH,DATA,KALI,lfs,homeALPINE,homeBLACKARCH,homeKALI,homeLFS,homeMANJARO,homeMANJARO-CLI,KALI,KVMVM,MANJARO,MAJARO-CLI,MULTIMEDIA,SOFTWARE}
+mkdir: created directory '/mnt/mnt/ALPINE'
+mkdir: created directory '/mnt/mnt/ARCHIVE'
+mkdir: created directory '/mnt/mnt/BACKUP'
+mkdir: created directory '/mnt/mnt/BLACKARCH'
+mkdir: created directory '/mnt/mnt/DATA'
+mkdir: created directory '/mnt/mnt/KALI'
+mkdir: created directory '/mnt/mnt/lfs'
+mkdir: created directory '/mnt/mnt/homeALPINE'
+mkdir: created directory '/mnt/mnt/homeBLACKARCH'
+mkdir: created directory '/mnt/mnt/homeKALI'
+mkdir: created directory '/mnt/mnt/homeLFS'
+mkdir: created directory '/mnt/mnt/homeMANJARO'
+mkdir: created directory '/mnt/mnt/homeMANJARO-CLI'
+mkdir: created directory '/mnt/mnt/KVMVM'
+mkdir: created directory '/mnt/mnt/MANJARO'
+mkdir: created directory '/mnt/mnt/MANJARO-CLI'
+mkdir: created directory '/mnt/mnt/MULTIMEDIA'
+mkdir: created directory '/mnt/mnt/SOFTWARE'
+#
+umount -v /DATA
+umount: /DATA unmounted
+#
+mount -v /dev/VGARCHLINUX/LVhomeARCHLINUX /mnt/home
+mount: /dev/mapper/VGARCHLINUX-LVhomeARCHLINUX mounted on /mnt/home.
+#
+mount -v /dev/VGSTORAGE/LVDATA /mnt/mnt/DATA/
+mount: /dev/mapper/VGSTORAGE-LVDATA mounted on /mnt/mnt/DATA.
+#
+mount -v /dev/VGSTORAGE/LVKVMVM /mnt/mnt/KVMVM/
+mount: /dev/mapper/VGSTORAGE-LVKVMVM mounted on /mnt/mnt/KVMVM.
+#
+mount -v /dev/VGSTORAGE/LVMULTIMEDIA /mnt/mnt/MULTIMEDIA
+mount: /dev/mapper/VGSTORAGE-LVMULTIMEDIA mounted on /mnt/mnt/MULTIMEDIA.
+#
+mount -v /dev/VGSTORAGE/LVSOFTWARE /mnt/mnt/SOFTWARE
+mount: /dev/mapper/VGSTORAGE-LVSOFTWARE mounted on /mnt/mnt/SOFTWARE.
+#
+swapon -v /dev/nvme0n1p2
+swapon: /dev/nvme0n1p2: found signature [pagesize=4096, signature=swap]
+swapon: /dev/nvme0n1p2: pagesize=4096, swapsize=8589934592, devsize=8589934592
+swapon /dev/nvme0n1p2
+#
+cp -v /mnt/etc/fstab /mnt/etc/fstab.org
+'/mnt/etc/fstab' -> '/mnt/etc/fstab.org'
+#
+genfstab -U /mnt >> /mnt/etc/fstab
+#
+cp -v /mnt/etc/fstab /mnt/mnt/DATA/System/ArchLinux/Files/fstab.gen
+'/mnt/etc/fstab' -> '/mnt/mnt/DATA/System/ArchLinux/Files/fstab.gen'
+#
+cp -v README /mnt/mnt/DATA/System/ArchLinux/Documentation/README
+'README' -> '/mnt/mnt/DATA/System/ArchLinux/Documentation/README'
+#
+cp -v install.txt /mnt/mnt/DATA/System/ArchLinux/Documentation/install.txt
+'install.txt' -> '/mnt/mnt/DATA/System/ArchLinux/Documentation/install.txt'
+#
+exit
+***********************************************************************************************************************************
+umount /mnt/KVMVM/root.x86_64/mnt/boot/efi
+umount /mnt/KVMVM/root.x86_64/mnt/home
+umount /mnt/KVMVM/root.x86_64/mnt/mnt/DATA
+umount /mnt/KVMVM/root.x86_64/mnt/mnt/KVMVM
+umount /mnt/KVMVM/root.x86_64/mnt/mnt/MULTIMEDIA
+umount /mnt/KVMVM/root.x86_64/mnt/mnt/SOFTWARE
+umount /mnt/KVMVM/root.x86_64/mnt
+#
+/mnt/KVMVM/root.x86_64/bin/arch-chroot /mnt/ARCHLINUX
+#
+mount -a
+#
+pacman -Q > /mnt/DATA/System/ArchLinux/Results/R000-001-pacman-Q 2>&1
+#
+pacman -Qi > /mnt/DATA/System/ArchLinux/Results/R000-002-pacman-Qi 2>&1
+#
+mv -v /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.org
+renamed '/etc/pacman.d/mirrorlist' -> '/etc/pacman.d/mirrorlist.org'
+#
+cp -v /mnt/DATA/System/ArchLinux/Files/mirrorlist /etc/pacman.d/mirrorlist
+'/mnt/DATA/System/ArchLinux/Files/mirrorlist' -> '/etc/pacman.d/mirrorlist'
+***********************************************************************************************************************************
+cp -v /etc/pacman.conf /etc/pacman.conf.org
+'/etc/pacman.conf' -> '/etc/pacman.conf.org'
+#
+nano /etc/pacman.conf
+AFTER: [multilib]
+CHANGE: #Include = /etc/pacman.d/mirrorlist
+TO: Include = /etc/pacman.d/mirrorlist
+#
+pacman -Sy
+:: Synchronizing package databases...
+ core is up to date
+ extra is up to date
+ community is up to date
+ multilib                     166.2 KiB   594 KiB/s 00:00 [#########################] 100%
+#
+pacman -S base > /mnt/DATA/System/ArchLinux/Packages/000-001-base 2>&1
+***********************************************************************************************************************************
+cp -v /etc/issue /etc/issue.org
+'/etc/issue' -> '/etc/issue.org'
+#
+cat > /etc/issue << "EOF"
+Welcome to ArchLinux 2019-11-01: KERNEL: \s: \m: \r: \v.
+DATE: \d: \t:
+SESSION: \n: \o: \l: \u: \U: \b:
+
+EOF
+#
+cp -v /etc/hostname /etc/hostname.org
+cp: cannot stat '/etc/hostname': No such file or directory
+#
+cat > /etc/hostname << "EOF"
+Ono-SendaiARCHLINUX.Tessier-Ashpool
+EOF
+#
+cp -v /etc/hosts /etc/hosts.org
+'/etc/hosts' -> '/etc/hosts.org'
+#
+cp -v /mnt/DATA/System/ArchLinux/Files/hosts /etc/hosts
+'/mnt/DATA/System/ArchLinux/Files/hosts' -> '/etc/hosts'
+#
+cp -v /mnt/DATA/System/ArchLinux/Files/consolefonts/ter-118b.psf.gz /usr/share/kbd/consolefonts/
+'/mnt/DATA/System/ArchLinux/Files/consolefonts/ter-118b.psf.gz' -> '/usr/share/kbd/consolefonts/ter-118b.psf.gz'
+#
+cp -v /etc/vconsole.conf /etc/vconsole.conf.org
+cp: cannot stat '/etc/vconsole.conf': No such file or directory
+#
+cat > /etc/vconsole.conf << "EOF"
+KEYMAP=us
+FONT=ter-118b.psf.gz
+EOF
+#
+mkdir -v /etc/systemd/system/getty@tty1.service.d
+mkdir: created directory '/etc/systemd/system/getty@tty1.service.d'
+#
+cat > /etc/systemd/system/getty@tty1.service.d/noclear.conf << "EOF"
+[Service]
+TTYVTDisallocate=no
+EOF
+#
+ln -svf /usr/share/zoneinfo/Australia/Sydney /etc/localtime
+'/etc/localtime' -> '/usr/share/zoneinfo/Australia/Sydney'
+#
+hwclock --systohc
+#
+cp -v /etc/locale.gen /etc/locale.gen.org
+'/etc/locale.gen' -> '/etc/locale.gen.org'
+#
+sed -i -e 's/#en_AU.UTF-8 UTF-8/en_AU.UTF-8 UTF-8/' /etc/locale.gen
+#
+locale-gen
+Generating locales...
+  en_AU.UTF-8... done
+Generation complete.
+#
+cp -v /etc/locale.conf /etc/locale.conf.org
+cp: cannot stat '/etc/locale.conf': No such file or directory
+#
+cp -v /mnt/DATA/System/ArchLinux/Files/locale-conf /etc/locale.conf
+'/mnt/DATA/System/ArchLinux/Files/locale-conf' -> '/etc/locale.conf'
+***********************************************************************************************************************************
+mv -v /etc/crypttab /etc/crypttab.org
+renamed '/etc/crypttab' -> '/etc/crypttab.org'
+#
+cp -v /mnt/DATA/System/ArchLinux/Files/crypttab /etc/crypttab
+'/mnt/DATA/System/ArchLinux/Files/crypttab' -> '/etc/crypttab'
+#
+mkdir -v /etc/luks-keys
+mkdir: created directory '/etc/luks-keys'
+#
+cp -v /mnt/DATA/System/ArchLinux/Files/luks-keys/* /etc/luks-keys/
+'/mnt/DATA/System/ArchLinux/Files/luks-keys/luks_ARCHLINUX' -> '/etc/luks-keys/luks_ARCHLINUX'
+'/mnt/DATA/System/ArchLinux/Files/luks-keys/luks_STORAGE' -> '/etc/luks-keys/luks_STORAGE'
+#
+cp -v /etc/fstab /mnt/DATA/System/ArchLinux/Files/fstab.gen
+'/etc/fstab' -> '/mnt/DATA/System/ArchLinux/Files/fstab.gen'
+#
+cp -v /mnt/DATA/System/ArchLinux/Files/fstab /etc/fstab
+'/mnt/DATA/System/ArchLinux/Files/fstab' -> '/etc/fstab'
+#
+mount -a
+***********************************************************************************************************************************
+cp -v /etc/mkinitcpio.conf /etc/mkinitcpio.conf.org
+'/etc/mkinitcpio.conf' -> '/etc/mkinitcpio.conf.org'
+#
+#sed -i -e 's/MODULES=()/MODULES=(btrfs)/'  /etc/mkinitcpio.conf
+sed -i -e 's/FILES=()/FILES=(\/etc\/luks-keys\/luks_ARCHLINUX)/' /etc/mkinitcpio.conf
+sed -i -e 's/HOOKS=(base udev autodetect modconf block filesystems keyboard fsck)/HOOKS=(base udev autodetect modconf block encrypt lvm2 filesystems keyboard fsck)/' /etc/mkinitcpio.conf
+#
+pacman -S --needed --noconfirm amd-ucode > /mnt/DATA/System/ArchLinux/Packages/000-001-amd-ucode 2>&1
+pacman -S --needed --noconfirm linux-firmware > /mnt/DATA/System/ArchLinux/Packages/000-002-linux-firmwware 2>&1
+pacman -S --needed --noconfirm linux > /mnt/DATA/System/ArchLinux/Packages/000-003-linux 2>&1
+pacman -S --needed --noconfirm linux-headers > /mnt/DATA/System/ArchLinux/Packages/000-004-linux-headers 2>&1
+pacman -S --needed --noconfirm linux-hardened > /mnt/DATA/System/ArchLinux/Packages/000-005-linux-hardened 2>&1
+pacman -S --needed --noconfirm linux-hardened-headers > /mnt/DATA/System/ArchLinux/Packages/000-006-linux-hardened-headers 2>&1
+pacman -S --needed --noconfirm linux-zen> /mnt/DATA/System/ArchLinux/Packages/000-007-linux-zen 2>&1
+pacman -S --needed --noconfirm linux-zen-headers > /mnt/DATA/System/ArchLinux/Packages/000-008-linux-zen-headers 2>&1
+#
+cp -v /etc/default/grub /etc/default/grub.org
+'/etc/default/grub' -> '/etc/default/grub.org'
+#
+sed -i -e 's/#GRUB_ENABLE_CRYPTODISK=y/GRUB_ENABLE_CRYPTODISK=y/' /etc/default/grub
+sed -i -e 's/GRUB_CMDLINE_LINUX_DEFAULT="quiet"/GRUB_CMDLINE_LINUX_DEFAULT=""/'  /etc/default/grub
+sed -i -e 's/GRUB_CMDLINE_LINUX=""/GRUB_CMDLINE_LINUX="cryptdevice=UUID=5b15fc05-8ca2-4fc0-8ba6-30ff75318d8f:cr_ARCHLINUX  cryptkey=rootfs:\/etc\/luks-keys\/luks_ARCHLINUX"/' /etc/default/grub
+sed -i -e 's/#GRUB_COLOR_NORMAL="light-blue\/black"/GRUB_COLOR_NORMAL="light-blue\/black"/' /etc/default/grub
+sed -i -e 's/#GRUB_COLOR_HIGHLIGHT="light-cyan\/blue"/GRUB_COLOR_HIGHLIGHT="light-cyan\/blue"/' /etc/default/grub
+#
+cat >> /etc/default/grub << "EOF"
+
+# Change value to "false" to allow grub-mkconfig to look for other installed OSes
+GRUB_DISABLE_OS_PROBER="true"
+EOF
+#
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=archlinux
+Installing for x86_64-efi platform.
+File descriptor 4 (/dev/nvme0n1p1) leaked on vgs invocation. Parent PID 22582:
+File descriptor 4 (/dev/nvme0n1p1) leaked on vgs invocation. Parent PID 22582:
+Installation finished. No error reported.
+#
+cp -v /etc/grub.d/40_custom /etc/grub.d/40_custom.org
+'/etc/grub.d/40_custom' -> '/etc/grub.d/40_custom.org'
+#
+cp -v /mnt/DATA/System/ArchLinux/Files/40_custom /etc/grub.d/40_custom
+'/mnt/DATA/System/ArchLinux/Files/40_custom' -> '/etc/grub.d/40_custom'
+#
+cp -v /boot/grub/grub.cfg /boot/grub/grub.cfg.org
+cp: cannot stat '/boot/grub/grub.cfg': No such file or directory
+#
+grub-mkconfig -o /boot/grub/grub.cfg > /mnt/DATA/System/ArchLinux/Results/R001-003-grub-mkconfig-o-grub.cfg 2>&1
+#
+cp -v /boot/grub/grub.cfg /boot/grub/grub.cfg.org
+cp: cannot stat '/boot/grub/grub.cfg': No such file or directory
+#
+cp -v /boot/grub/grub.cfg.mkconfig /mnt/DATA/System/ArchLinux/Files/grub.cfg.mkconfig
+'/boot/grub/grub.cfg.mkconfig' -> '/mnt/DATA/System/ArchLinux/Files/grub.cfg.mkconfig'
+#
+***********************************************************************************************************************************
+passwd
+New password:
+Retype new password:
+passwd: password updated successfully
+#
+# Pathnames of valid login shells.
+# See shells(5) for details.
+
+/bin/sh
+/bin/bash
+/etc/shells (END)
+#
+chsh -s /usr/bin/zsh
+Changing shell for root.
+Shell changed.
+#
+cp -v /mnt/DATA/System/ArchLinux/Files/zshrc /root/.zshrc
+'/mnt/DATA/System/ArchLinux/Files/zshrc' -> '/root/.zshrc'
+#
+zsh
+#
+cp -v /mnt/DATA/System/ArchLinux/Files/nanorc /root/.nanorc
+'/mnt/DATA/System/ArchLinux/Files/nanorc' -> '/root/.nanorc'
+#
+useradd -m -G wheel -g users -s /usr/bin/zsh paularchlinux
+#
+passwd paularchlinux
+New password:
+Retype new password:
+passwd: password updated successful
+#
+cp -v /mnt/DATA/System/ArchLinux/Files/zshrc /home/paularchlinux/.zshrc
+'/mnt/DATA/System/ArchLinux/Files/zshrc' -> '/home/paularchlinux/.zshrc'
+#
+chown -v paularchlinux:users /home/paularchlinux/.zshrc
+changed ownership of '/home/paularchlinux/.zshrc' from root:root to paularchlinux:users
+#
+cp -v /mnt/DATA/System/ArchLinux/Files/nanorc /home/paularchlinux/.nanorc
+'/mnt/DATA/System/ArchLinux/Files/nanorc' -> '/home/paularchlinux/.nanorc'
+#
+chown -v paularchlinux:users /home/paularchlinux/.nanorc
+changed ownership of '/home/paularchlinux/.nanorc' from root:root to paularchlinux:users
+#
+EDITOR=nano visudo
+# START OF INSTRUCTIONS
+AFTER: ##
+       ## User privilege specification
+       ##
+       root ALL=(ALL) ALL
+ADD:   paularchlinux ALL=(ALL)
+MODIFY: # %wheel ALL=(ALL) ALL
+TO:     %wheel ALL=(ALL) ALL
+# END OF INSTRUCTIONS

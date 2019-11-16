@@ -1,0 +1,29 @@
+cp -v /usr/bin/buildpkg /mnt/DATA/System/ArchLinux/Scripts/
+#'/usr/bin/buildpkg' -> '/mnt/DATA/System/ArchLinux/Scripts/buildpkg'
+#
+cp -v /usr/bin/buildtree /mnt/DATA/System/ArchLinux/Scripts/
+# '/usr/bin/buildtree' -> '/mnt/DATA/System/ArchLinux/Scripts/buildtree'
+#
+cp -v /usr/bin/buildiso /mnt/DATA/System/ArchLinux/Scripts/
+# '/usr/bin/buildiso' -> '/mnt/DATA/System/ArchLinux/Scripts/buildiso'
+#
+cp -v /usr/bin/makepkg /mnt/DATA/System/ArchLinux/Scripts/
+# '/usr/bin/makepkg' -> '/mnt/DATA/System/ArchLinux/Scripts/makepkg'
+#
+cp -v /usr/bin/ArchLinux-chroot /mnt/DATA/System/ArchLinux/Scripts/
+# '/usr/bin/ArchLinux-chroot' -> '/mnt/DATA/System/ArchLinux/Scripts/ArchLinux-chroot'
+#
+cp -v /usr/bin/mkchroot /mnt/DATA/System/ArchLinux/Scripts
+# '/usr/bin/mkchroot' -> '/mnt/DATA/System/ArchLinux/Scripts/mkchroot'
+#
+cp -v /usr/bin/paclist /mnt/DATA/System/ArchLinux/Scripts
+# '/usr/bin/paclist' -> '/mnt/DATA/System/ArchLinux/Scripts/paclist'
+#
+cp -v /usr/bin/paclog-pkglist /mnt/DATA/System/ArchLinux/Scripts
+# '/usr/bin/paclog-pkglist' -> '/mnt/DATA/System/ArchLinux/Scripts/paclog-pkglist'
+#
+cp -v /usr/bin/pacsearch /mnt/DATA/System/ArchLinux/Scripts
+# '/usr/bin/pacsearch' -> '/mnt/DATA/System/ArchLinux/Scripts/pacsearch'
+#
+cp -v /usr/bin/pkgdelta /mnt/DATA/System/ArchLinux/Scripts/
+# '/usr/bin/pkgdelta' -> '/mnt/DATA/System/ArchLinux/Scripts/pkgdelta'

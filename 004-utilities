@@ -1,0 +1,155 @@
+pacman -S --needed --noconfirm thin-provisioning-tools > /mnt/DATA/System/ArchLinux/Packages/004-001-thin-provisioning-tools 2>&1
+pacman -S --needed --noconfirm lvm2 > /mnt/DATA/System/ArchLinux/Packages/004-002-lvm2 2>&1
+pacman -S --needed --noconfirm mkinitcpio-busybox > /mnt/DATA/System/ArchLinux/Packages/004-003-mkinitcpio-busybox 2>&1
+pacman -S --needed --noconfirm mkinitcpio > /mnt/DATA/System/ArchLinux/Packages/004-004-mkinitcpio 2>&1
+pacman -S --needed --noconfirm grub > /mnt/DATA/System/ArchLinux/Packages/004-005-grub 2>&1
+pacman -S --needed --noconfirm fuse-common > /mnt/DATA/System/ArchLinux/Packages/004-006-fuse-common 2>&1
+pacman -S --needed --noconfirm fuse2 > /mnt/DATA/System/ArchLinux/Packages/004-007-fuse2 2>&1
+pacman -S --needed --noconfirm dosfstools > /mnt/DATA/System/ArchLinux/Packages/004-008-dosfstools 2>&1
+pacman -S --needed --noconfirm efivar > /mnt/DATA/System/ArchLinux/Packages/004-009-efivar 2>&1
+pacman -S --needed --noconfirm efibootmgr > /mnt/DATA/System/ArchLinux/Packages/004-010-efibootmgr 2>&1
+pacman -S --needed --noconfirm os-prober > /mnt/DATA/System/ArchLinux/Packages/004-011-os-prober 2>&1
+pacman -S --needed --noconfirm mtools > /mnt/DATA/System/ArchLinux/Packages/004-012-mtools 2>&1
+pacman -S --needed --noconfirm zsh > /mnt/DATA/System/ArchLinux/Packages/004-013-zsh 2>&1
+pacman -S --needed --noconfirm zsh-completions > /mnt/DATA/System/ArchLinux/Packages/004-014-zsh-completions 2>&1
+pacman -S --needed --noconfirm nano > /mnt/DATA/System/ArchLinux/Packages/004-015-nano 2>&1
+pacman -S --needed --noconfirm gpm > /mnt/DATA/System/ArchLinux/Packages/004-016-gpm 2>&1
+pacman -S --needed --noconfirm sudo > /mnt/DATA/System/ArchLinux/Packages/004-017-sudo 2>&1
+pacman -S --needed --noconfirm fakeroot > /mnt/DATA/System/ArchLinux/Packages/004-018-fakeroot 2>&1
+pacman -S --needed --noconfirm mlocate > /mnt/DATA/System/ArchLinux/Packages/004-019-mlocate 2>&1
+pacman -S --needed --noconfirm tmux > /mnt/DATA/System/ArchLinux/Packages/004-020-tmux 2>&1
+pacman -S --needed --noconfirm mc > /mnt/DATA/System/ArchLinux/Packages/004-021-mc 2>&1
+pacman -S --needed --noconfirm htop > /mnt/DATA/System/ArchLinux/Packages/004-022-htop 2>&1
+pacman -S --needed --noconfirm lsof > /mnt/DATA/System/ArchLinux/Packages/004-023-lsof 2>&1
+pacman -S --needed --noconfirm strace > /mnt/DATA/System/ArchLinux/Packages/004-024-strace 2>&1
+pacman -S --needed --noconfirm groff > /mnt/DATA/System/ArchLinux/Packages/004-025-groff 2>&1
+pacman -S --needed --noconfirm man-db > /mnt/DATA/System/ArchLinux/Packages/004-026-man-db 2>&1
+pacman -S --needed --noconfirm man-pages > /mnt/DATA/System/ArchLinux/Packages/004-027-man-pages 2>&1
+pacman -S --needed --noconfirm aspell > /mnt/DATA/System/ArchLinux/Packages/004-029-aspell 2>&1
+pacman -S --needed --noconfirm aspell-en > /mnt/DATA/System/ArchLinux/Packages/004-030-aspell-en 2>&1
+pacman -S --needed --noconfirm hunspell > /mnt/DATA/System/ArchLinux/Packages/004-031-hunspell 2>&1
+pacman -S --needed --noconfirm hunspell-en_AU > /mnt/DATA/System/ArchLinux/Packages/004-032-hunspell-en_AU 2>&1
+pacman -S --needed --noconfirm gptfdisk > /mnt/DATA/System/ArchLinux/Packages/004-033-gptfdisk 2>&1
+pacman -S --needed --noconfirm bash-completion > /mnt/DATA/System/ArchLinux/Packages/004-034-bash-completion 2>&1
+pacman -S --needed --noconfirm hwinfo > /mnt/DATA/System/ArchLinux/Packages/004-035-hwinfo 2>&1
+pacman -S --needed --noconfirm texinfo > /mnt/DATA/System/ArchLinux/Packages/004-036-texinfo 2>&1
+pacman -S --needed --noconfirm unzip > /mnt/DATA/System/ArchLinux/Packages/004-037-unzip 2>&1
+pacman -S --needed --noconfirm graphite > /mnt/DATA/System/ArchLinux/Packages/004-038-graphite 2>&1
+pacman -S --needed --noconfirm harfbuzz > /mnt/DATA/System/ArchLinux/Packages/004-039-harfbuzz 2>&1
+pacman -S --needed --noconfirm bcg729 > /mnt/DATA/System/ArchLinux/Packages/004-040-bcg729 2>&1
+
+
+pacman -S --needed --noconfirm logwatch > /mnt/DATA/System/ArchLinux/Packages/004-011-logwatch 2>&1
+
+pacman -S --needed --noconfirm acpi_call > /mnt/DATA/System/ArchLinux/Packages/004-001-acpi_call 2>&1
+pacman -S --noconfirm aide > /mnt/DATA/System/ArchLinux/Packages/004-002-aide 2>&1
+pacman -S --noconfirm arch-install-scripts > /mnt/DATA/System/ArchLinux/Packages/004-003-arch-install-scripts 2>&1
+pacman -S --noconfirm archiso  > /mnt/DATA/System/ArchLinux/Packages/004-004-archiso 2>&1
+pacman -S --noconfirm arj > /mnt/DATA/System/ArchLinux/Packages/004-005-arj 2>&1
+
+pacman -S --noconfirm awstats > /mnt/DATA/System/ArchLinux/Packages/004-007-awstats 2>&1
+
+pacman -S --noconfirm biber > /mnt/DATA/System/ArchLinux/Packages/004-009-biber 2>&1
+pacman -S --noconfirm busybox > /mnt/DATA/System/ArchLinux/Packages/004-010-busybox 2>&1
+pacman -S --noconfirm cabextract > /mnt/DATA/System/ArchLinux/Packages/004-011-cabextract 2>&1
+pacman -S --noconfirm cdparanoia > /mnt/DATA/System/ArchLinux/Packages/004-012-cdparanoia 2>&1
+pacman -S --noconfirm cdrdao > /mnt/DATA/System/ArchLinux/Packages/004-013-cdrdao 2>&1
+pacman -S --noconfirm cdrkit > /mnt/DATA/System/ArchLinux/Packages/004-014-cdrkit 2>&1
+pacman -S --noconfirm cpio > /mnt/DATA/System/ArchLinux/Packages/004-015-cpio 2>&1
+pacman -S --noconfirm dkms > /mnt/DATA/System/ArchLinux/Packages/004-016-dkms 2>&1
+pacman -S --noconfirm doxygen > /mnt/DATA/System/ArchLinux/Packages/004-017-doxygen 2>&1
+pacman -S --noconfirm dvd+rw-tools > /mnt/DATA/System/ArchLinux/Packages/004-018-dvd+rw-tools 2>&1
+pacman -S --noconfirm exa > /mnt/DATA/System/ArchLinux/Packages/004-019-exa 2>&1
+pacman -S --noconfirm elfutils > /mnt/DATA/System/ArchLinux/Packages/004-020-elfutils 2>&1
+pacman -S --noconfirm emovix > /mnt/DATA/System/ArchLinux/Packages/004-021-emovix 2>&1
+pacman -S --noconfirm exfat-utils > /mnt/DATA/System/ArchLinux/Packages/004-022-exfat-utils 2>&1
+pacman -S --noconfirm f2fs-tools > /mnt/DATA/System/ArchLinux/Packages/004-023-f2fs-tools 2>&1
+pacman -S --noconfirm flac > /mnt/DATA/System/ArchLinux/Packages/004-024-flac 2>&1
+
+pacman -S --noconfirm gperftools > /mnt/DATA/System/ArchLinux/Packages/004-026-gperftools 2>&1
+pacman -S --noconfirm gpsd > /mnt/DATA/System/ArchLinux/Packages/004-027-gpsd 2>&1
+pacman -S --noconfirm gv > /mnt/DATA/System/ArchLinux/Packages/004-028-gv 2>&1
+pacman -S --noconfirm harfbuzz-icu > /mnt/DATA/System/ArchLinux/Packages/004-029-harfbuzz-icu 2>&1
+pacman -S --noconfirm hddtemp > /mnt/DATA/System/ArchLinux/Packages/004-030-hddtemp 2>&1
+pacman -S --noconfirm hdparm > /mnt/DATA/System/ArchLinux/Packages/004-031-hdparm 2>&1
+
+pacman -S --noconfirm hwdetect > /mnt/DATA/System/ArchLinux/Packages/004-034-hwdetect 2>&1
+
+pacman -S --noconfirm hwloc > /mnt/DATA/System/ArchLinux/Packages/004-036-hwloc 2>&1
+pacman -S --noconfirm ipmitool > /mnt/DATA/System/ArchLinux/Packages/004-037-ipmitool 2>&1
+pacman -S --noconfirm lhasa > /mnt/DATA/System/ArchLinux/Packages/004-038-lhasa 2>&1
+pacman -S --noconfirm libasyncns > /mnt/DATA/System/ArchLinux/Packages/004-039-libasyncns 2>&1
+pacman -S --noconfirm libb64 > /mnt/DATA/System/ArchLinux/Packages/004-040-libb64 2>&1
+pacman -S --noconfirm libcddb > /mnt/DATA/System/ArchLinux/Packages/004-041-libcddb 2>&1
+pacman -S --noconfirm libcdio > /mnt/DATA/System/ArchLinux/Packages/004-042-libcdio 2>&1
+pacman -S --noconfirm libde265 > /mnt/DATA/System/ArchLinux/Packages/004-043-libde265 2>&1
+pacman -S --noconfirm libetonyek > /mnt/DATA/System/ArchLinux/Packages/004-044-libetonyek 2>&1
+pacman -S --noconfirm libheif > /mnt/DATA/System/ArchLinux/Packages/004-045-libheif 2>&1
+pacman -S --noconfirm libsynctex > /mnt/DATA/System/ArchLinux/Packages/004-046-libsynctex 2>&1
+
+libunrar
+pacman -S --noconfirm libsndfile > /mnt/DATA/System/ArchLinux/Packages/004-049-libsndfile 2>&1
+pacman -S --noconfirm libpulse > /mnt/DATA/System/ArchLinux/Packages/004-050-libpulse 2>&1
+pacman -S --noconfirm libraw > /mnt/DATA/System/ArchLinux/Packages/004-051-libraw 2>&1
+pacman -S --noconfirm libvisio > /mnt/DATA/System/ArchLinux/Packages/004-052-libvisio 2>&1
+pacman -S --noconfirm libwmf > /mnt/DATA/System/ArchLinux/Packages/004-053-libwmf 2>&1
+pacman -S --noconfirm libwps > /mnt/DATA/System/ArchLinux/Packages/004-054-libwps 2>&1
+pacman -S --noconfirm lsb-release > /mnt/DATA/System/ArchLinux/Packages/004-055-lsb-release 2>&1
+pacman -S --noconfirm lshw > /mnt/DATA/System/ArchLinux/Packages/004-056-lshw 2>&1
+
+pacman -S --noconfirm lynis > /mnt/DATA/System/ArchLinux/Packages/004-058-lynis 2>&1
+pacman -S --noconfirm lzop > /mnt/DATA/System/ArchLinux/Packages/004-059-lzop 2>&1
+
+pacman -S --noconfirm nilfs-utils > /mnt/DATA/System/ArchLinux/Packages/004-062-nilfs-utils 2>&1
+pacman -S --noconfirm ntfs-3g > /mnt/DATA/System/ArchLinux/Packages/004-063-ntfs-3g 2>&1
+pacman -S --noconfirm ocl-icd > /mnt/DATA/System/ArchLinux/Packages/004-064-ocl-icd 2>&1
+pacman -S --noconfirm openjpeg > /mnt/DATA/System/ArchLinux/Packages/004-065-openjpeg 2>&1
+pacman -S --noconfirm openmpi > /mnt/DATA/System/ArchLinux/Packages/004-066-openmpi 2>&1
+pacman -S --noconfirm p7zip > /mnt/DATA/System/ArchLinux/Packages/004-067-p7zip 2>&1
+pacman -S --noconfirm pacman-contrib > /mnt/DATA/System/ArchLinux/Packages/004-068-pacman-contrib 2>&1
+pacman -S --noconfirm parted > /mnt/DATA/System/ArchLinux/Packages/004-069-parted 2>&1
+pacman -S --noconfirm pcsclite > /mnt/DATA/System/ArchLinux/Packages/004-070-pcsclite 2>&1
+pkgdiff
+pacman -S --noconfirm pkgfile > /mnt/DATA/System/ArchLinux/Packages/004-071-pkgfile 2>&1
+pacman -S --noconfirm pkgstats > /mnt/DATA/System/ArchLinux/Packages/004-072-pkgstats 2>&1
+pacman -S --noconfirm poppler-data > /mnt/DATA/System/ArchLinux/Packages/004-073-poppler-data 2>&1
+pacman -S --noconfirm potrace > /mnt/DATA/System/ArchLinux/Packages/004-074-potrace 2>&1
+pacman -S --noconfirm progsreiserfs > /mnt/DATA/System/ArchLinux/Packages/004-075-progsreiserfs 2>&1
+pacman -S --noconfirm pstoedit > /mnt/DATA/System/ArchLinux/Packages/004-076-pstoedit 2>&1
+rhash
+pacman -S --noconfirm rpmextract > /mnt/DATA/System/ArchLinux/Packages/004-077-rpmextract 2>&1
+pacman -S --noconfirm sdl > /mnt/DATA/System/ArchLinux/Packages/004-078-sdl 2>&1
+pacman -S --noconfirm smartmontools > /mnt/DATA/System/ArchLinux/Packages/004-079-smartmontools 2>&1
+
+pacman -S --noconfirm sysdig > /mnt/DATA/System/ArchLinux/Packages/004-081-sysdig 2>&1
+pacman -S --noconfirm t1lib > /mnt/DATA/System/ArchLinux/Packages/004-082-t1lib 2>&1
+pacman -S --noconfirm t1utils > /mnt/DATA/System/ArchLinux/Packages/004-083-t1utils 2>&1
+pacman -S --noconfirm testdisk > /mnt/DATA/System/ArchLinux/Packages/004-084-testdisk 2>&1
+pacman -S --noconfirm texlive-bin > /mnt/DATA/System/ArchLinux/Packages/004-085-texlive-bin 2>&1
+pacman -S --noconfirm texlive-latexextra > /mnt/DATA/System/ArchLinux/Packages/004-086-texlive-latexextra 2>&1
+pacman -S --noconfirm texlive-pictures > /mnt/DATA/System/ArchLinux/Packages/004-087-texlive-pictures 2>&1
+pacman -S --noconfirm tlp > /mnt/DATA/System/ArchLinux/Packages/004-088-tlp 2>&1
+pacman -S --noconfirm tree > /mnt/DATA/System/ArchLinux/Packages/004-090-tree 2>&1
+pacman -S --noconfirm udftools > /mnt/DATA/System/ArchLinux/Packages/004-091-udftools 2>&1
+pacman -S --noconfirm unace > /mnt/DATA/System/ArchLinux/Packages/004-092-unace 2>&1
+pacman -S --noconfirm unarj > /mnt/DATA/System/ArchLinux/Packages/004-093-unarj 2>&1
+pacman -S --noconfirm unrar > /mnt/DATA/System/ArchLinux/Packages/004-094-unrar 2>&1
+
+pacman -S --noconfirm usb_modeswitch > /mnt/DATA/System/ArchLinux/Packages/004-096-usb_modeswitch 2>&1
+pacman -S --noconfirm vcdimager > /mnt/DATA/System/ArchLinux/Packages/004-097-vcdimager 2>&1
+pacman -S --noconfirm wmctrl > /mnt/DATA/System/ArchLinux/Packages/004-098-wmctrl 2>&1
+pacman -S --noconfirm xinetd > /mnt/DATA/System/ArchLinux/Packages/004-099-xinetd 2>&1
+pacman -S --noconfirm zip > /mnt/DATA/System/ArchLinux/Packages/004-100-zip 2>&1
+************************************************************************************************************************************
+inxi #  [NOT FOUND][AUR]
+
+uniso #  [NOT FOUND][AUR]
+#
+dar #  [NOT FOUND][AUR]
+#
+
+#
+freeipmi #  [NOT FOUND]
+#
+zfs-utils # [NOT FOUND][AUR]
+************************************************************************************************************************************

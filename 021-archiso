@@ -1,0 +1,7 @@
+mkdir ~/archlive
+#
+#
+cp -rv /usr/share/archiso/configs/releng/ ~/archlive > /mnt/DATA/System/ArchLinux/Results/R010-1-cp-releng 2>&1
+#
+cd ~/archlive/releng
+#

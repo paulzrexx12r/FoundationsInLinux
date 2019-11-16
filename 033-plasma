@@ -1,0 +1,163 @@
+_now=$(date +"%Y%m%d%H:00") &&
+echo "y"  | pacman -S accountsservice  aom  appstream  appstream-qt  archlinux-appstream-data  attica  baloo  bc  bluedevil  bluez  \
+                      bluez-libs  bluez-qt  breeze  breeze-gtk  breeze-icons  celt  convertlit  discover  dbus-glib  dmraid  drkonqi  \
+                      ebook-tools  editorconfig-core-c  exiv2  ffmpeg  fftw  frameworkintegration  gc  gdb  gdb-common  gptfdisk  gsm  \
+                      guile2.0  jansson  kactivities  kactivitymanagerd  kactivities-stats  karchive  kauth  kbookmarks  kcmutils  kcodecs  \
+                      kcompletion  kconfig  kconfigwidgets  kcoreaddons  kcrash  kdbusaddons  kdeclarative  kdecoration  kded  kde-cli-tools  \
+                      kde-gtk-config  kdelibs4support  kdeplasma-addons  kdesu  kemoticons  kfilemetadata  kgamma5  kglobalaccel  kguiaddons  \
+                      kholidays  khotkeys  ki18n  kiconthemes  kidletime  kinfocenter  kinit  kio  kirigami2  kitemmodels  kitemviews  \
+                      kjobwidgets  kjs  kjsembed  kmenuedit  knetattach  knewstuff  knotifications  knotifyconfig  kpackage  kparts  kpeople  \
+                      kpty  krunner  kservice  kscreen  kscreenlocker  ksshaskpass  ksysguard  ktexteditor  ktextwidgets  kunitconversion  \
+                      kwallet  kwallet-pam  kwayland  kwayland-integration  kwidgetsaddons  kwin  kwindowsystem  kwrited  kxmlgui  \
+                      kxmlrpcclient  l-smash  libass  libatasmart  libatomic_ops  libblockdev  libbluray  libbytesize  libdbusmenu-qt5  \
+                      libdmtx  libgit2  libibus  libical  libimobiledevice  libkscreen  libksysguard  libmbim  libmodplug  libndp  libnewt  \
+                      libnm  libpgm  libplist  libpwquality  libqalculate  libqmi  libsodium  libsoxr  libssh  libstemmer  libteam  \
+                      libusbmuxd  libutempter  libxres  libyaml  libzip  lmdb  media-player-info  milou  mobile-broadband-provider-info  \
+                      modemmanager  modemmanager-qt  ndctl networkmanager  networkmanager-qt  noto-fonts  openal  opencore-amr  oxygen  \
+                      parted  phonon-qt5  phonon-qt5-gstreamer  pipewire  plasma5-applets-redshift-control plasma5-applets-thermal-monitor  \
+                      plasma-browser-integration  plasma-desktop  plasma-framework  plasma-integration  plasma-nm  plasma-pa  plasma-sdk  \
+                      plasma-vault  plasma-workspace  plasma-workspace-wallpapers  polkit-kde-agent  polkit-qt5  poppler-qt5  powerdevil  \
+                      prison  pulseaudio  python  qca  qqc2-desktop-style  qrencode  qt5-graphicaleffects  qt5-location  qt5-multimedia  \
+                      qt5-quickcontrols  qt5-quickcontrols2  qt5-script  qt5-sensors  qt5-speech  qt5-tools  qt5-webchannel  qt5-webkit  \
+                      qt5-x11extras  realtime-privileges  rtkit  sbc  sddm-kcm  sdl  sdl2  slang  socat  solid  sonnet  syntax-highlighting  \
+                      systemsettings  threadweaver  ttf-hack  udisks2  upower  usbmuxd  user-manager  vid.stab  volume_key  \
+                      webrtc-audio-processing  x264  x265  xcb-util-cursor  xdg-desktop-portal-kde  xvidcore  zeromq  \
+                      --needed  \
+                      > /mnt/DATA/System/ArchLinux/Packages/$_now._05plasma 2>&1
+####################################################################################################################################
+************************************************************************************************************************************
+# PLASMA - INFORMATION
+checking keyring...
+checking package integrity...
+loading package files...
+checking for file conflicts...
+checking available disk space...
+:: Processing package changes...
+
+installing pipewire...
+Created symlink /etc/systemd/user/sockets.target.wants/pipewire.socket -> /usr/lib/systemd/user/pipewire.socket.
+
+installing realtime-privileges...
+The 'realtime' group has been created. Add your user to it and re-login to use realtime privileges.
+
+:: Running post-transaction hooks...
+( 1/17) Updating linux-hardened initcpios...
+==> Building image from preset: /etc/mkinitcpio.d/linux-hardened.preset: 'default'
+  -> -k /boot/vmlinuz-linux-hardened -c /etc/mkinitcpio.conf -g /boot/initramfs-linux-hardened.img
+==> Starting build: 4.20.7.a-1-hardened
+  -> Running build hook: [base]
+  -> Running build hook: [udev]
+  -> Running build hook: [autodetect]
+  -> Running build hook: [modconf]
+  -> Running build hook: [block]
+  -> Running build hook: [encrypt]
+  -> Running build hook: [lvm2]
+  -> Running build hook: [filesystems]
+  -> Running build hook: [keyboard]
+  -> Running build hook: [fsck]
+==> Generating module dependencies
+==> Creating gzip-compressed initcpio image: /boot/initramfs-linux-hardened.img
+==> Image generation successful
+==> Building image from preset: /etc/mkinitcpio.d/linux-hardened.preset: 'fallback'
+  -> -k /boot/vmlinuz-linux-hardened -c /etc/mkinitcpio.conf -g /boot/initramfs-linux-hardened-fallback.img -S autodetect
+==> Starting build: 4.20.7.a-1-hardened
+  -> Running build hook: [base]
+  -> Running build hook: [udev]
+  -> Running build hook: [modconf]
+  -> Running build hook: [block]
+==> WARNING: Possibly missing firmware for module: aic94xx
+==> WARNING: Possibly missing firmware for module: wd719x
+  -> Running build hook: [encrypt]
+  -> Running build hook: [lvm2]
+  -> Running build hook: [filesystems]
+  -> Running build hook: [keyboard]
+  -> Running build hook: [fsck]
+==> Generating module dependencies
+==> Creating gzip-compressed initcpio image: /boot/initramfs-linux-hardened-fallback.img
+==> Image generation successful
+( 2/17) Updating linux-lts initcpios...
+==> Building image from preset: /etc/mkinitcpio.d/linux-lts.preset: 'default'
+  -> -k /boot/vmlinuz-linux-lts -c /etc/mkinitcpio.conf -g /boot/initramfs-linux-lts.img
+==> Starting build: 4.19.20-1-lts
+  -> Running build hook: [base]
+  -> Running build hook: [udev]
+  -> Running build hook: [autodetect]
+  -> Running build hook: [modconf]
+  -> Running build hook: [block]
+  -> Running build hook: [encrypt]
+  -> Running build hook: [lvm2]
+  -> Running build hook: [filesystems]
+  -> Running build hook: [keyboard]
+  -> Running build hook: [fsck]
+==> Generating module dependencies
+==> Creating gzip-compressed initcpio image: /boot/initramfs-linux-lts.img
+==> Image generation successful
+==> Building image from preset: /etc/mkinitcpio.d/linux-lts.preset: 'fallback'
+  -> -k /boot/vmlinuz-linux-lts -c /etc/mkinitcpio.conf -g /boot/initramfs-linux-lts-fallback.img -S autodetect
+==> Starting build: 4.19.20-1-lts
+  -> Running build hook: [base]
+  -> Running build hook: [udev]
+  -> Running build hook: [modconf]
+  -> Running build hook: [block]
+==> WARNING: Possibly missing firmware for module: aic94xx
+==> WARNING: Possibly missing firmware for module: wd719x
+  -> Running build hook: [encrypt]
+  -> Running build hook: [lvm2]
+  -> Running build hook: [filesystems]
+  -> Running build hook: [keyboard]
+  -> Running build hook: [fsck]
+==> Generating module dependencies
+==> Creating gzip-compressed initcpio image: /boot/initramfs-linux-lts-fallback.img
+==> Image generation successful
+( 3/17) Updating linux initcpios...
+==> Building image from preset: /etc/mkinitcpio.d/linux.preset: 'default'
+  -> -k /boot/vmlinuz-linux -c /etc/mkinitcpio.conf -g /boot/initramfs-linux.img
+==> Starting build: 4.20.7-arch1-1-ARCH
+  -> Running build hook: [base]
+  -> Running build hook: [udev]
+  -> Running build hook: [autodetect]
+  -> Running build hook: [modconf]
+  -> Running build hook: [block]
+  -> Running build hook: [encrypt]
+  -> Running build hook: [lvm2]
+  -> Running build hook: [filesystems]
+  -> Running build hook: [keyboard]
+  -> Running build hook: [fsck]
+==> Generating module dependencies
+==> Creating gzip-compressed initcpio image: /boot/initramfs-linux.img
+==> Image generation successful
+==> Building image from preset: /etc/mkinitcpio.d/linux.preset: 'fallback'
+  -> -k /boot/vmlinuz-linux -c /etc/mkinitcpio.conf -g /boot/initramfs-linux-fallback.img -S autodetect
+==> Starting build: 4.20.7-arch1-1-ARCH
+  -> Running build hook: [base]
+  -> Running build hook: [udev]
+  -> Running build hook: [modconf]
+  -> Running build hook: [block]
+==> WARNING: Possibly missing firmware for module: aic94xx
+==> WARNING: Possibly missing firmware for module: wd719x
+  -> Running build hook: [encrypt]
+  -> Running build hook: [lvm2]
+  -> Running build hook: [filesystems]
+  -> Running build hook: [keyboard]
+  -> Running build hook: [fsck]
+==> Generating module dependencies
+==> Creating gzip-compressed initcpio image: /boot/initramfs-linux-fallback.img
+==> Image generation successful
+( 4/17) Updating fontconfig cache...
+( 5/17) Compiling GSettings XML schema files...
+( 6/17) Updating icon theme caches...
+( 7/17) Reloading system manager configuration...
+  Skipped: Current root is not booted.
+( 8/17) Updating udev hardware database...
+( 9/17) Creating system user accounts...
+(10/17) Creating temporary files...
+error: command failed to execute correctly
+(11/17) Reloading device manager configuration...
+  Skipped: Device manager is not running.
+(12/17) Arming ConditionNeedsUpdate...
+(13/17) Updating the info directory file...
+(14/17) Updating the appstream cache...
+AppStream cache update completed successfully.
+(15/17) Updating the desktop file MIME type cache...
+(16/17) Updating the MIME type database...
+(17/17) Updating X fontdir indices...

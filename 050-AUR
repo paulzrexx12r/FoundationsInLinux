@@ -1,0 +1,406 @@
+su paularchlinux
+#
+mkdir -pv AUR/Build
+mkdir: created directory 'AUR'
+mkdir: created directory 'AUR/Build'
+#
+cd ~/AUR/Build
+#
+git clone https://aur.archlinux.org/expressvpn.git
+Cloning into 'expressvpn'...
+remote: Enumerating objects: 139, done.
+remote: Counting objects: 100% (139/139), done.
+remote: Compressing objects: 100% (96/96), done.
+remote: Total 139 (delta 42), reused 139 (delta 42)
+Receiving objects: 100% (139/139), 43.03 KiB | 148.00 KiB/s, done.
+Resolving deltas: 100% (42/42), done.
+#
+cd expressvpn
+#
+makepkg --skippgpcheck -si > /mnt/DATA/System/ArchLinux/Results/AUR-001-makepkg-si-expressvpn 2>&1
+
+# NOTE: ACTIVATION CODE: EDRFWHXPK5KPJJOJTXYUI9J --- ENMEG6HFAMNXSFQC7M4KSYF
+************************************************************************************************************************************
+su paularchlinux
+#
+cd ~/AUR/Build
+#
+git clone https://aur.archlinux.org/nagios.git
+Cloning into 'nagios'...
+remote: Enumerating objects: 64, done.
+remote: Counting objects: 100% (64/64), done.
+remote: Compressing objects: 100% (45/45), done.
+remote: Total 64 (delta 19), reused 64 (delta 19)
+Unpacking objects: 100% (64/64), done.
+#
+cd nagios
+# (git)-[master]-%
+
+makepkg -si > /mnt/DATA/System/ArchLinux/Results/AUR-002-makepkg-si-nagios 2>&1
+************************************************************************************************************************************
+su paularchlinux
+#
+cd ~/AUR/Build
+#
+git clone https://aur.archlinux.org/ntopng.git
+Cloning into 'ntopng'...
+remote: Enumerating objects: 109, done.
+remote: Counting objects: 100% (109/109), done.
+remote: Compressing objects: 100% (88/88), done.
+remote: Total 109 (delta 19), reused 109 (delta 19)
+Receiving objects: 100% (109/109), 39.60 KiB | 124.00 KiB/s, done.
+Resolving deltas: 100% (19/19), done.
+cd ntopng
+# (git)-[master]-%
+makepkg -si > /mnt/DATA/System/ArchLinux/Results/AUR-003-makepkg-si-ntopng 2>&1
+************************************************************************************************************************************
+su paularchlinux
+#
+cd ~/AUR/Build
+#
+git clone https://aur.archlinux.org/uniso.git
+# Cloning into 'uniso'...
+# remote: Enumerating objects: 4, done.
+# remote: Counting objects: 100% (4/4), done.
+# remote: Compressing objects: 100% (4/4), done.
+# remote: Total 4 (delta 0), reused 4 (delta 0)
+# Unpacking objects: 100% (4/4), done.
+cd uniso
+# (git)-[master]-%
+_now=$(date +"%Y%m%d%H:00")
+makepkg -si > /mnt/DATA/System/ArchLinux/Results/$_now._R997-02-makepkg-si-uniso 2>&1
+************************************************************************************************************************************
+
+su paularchlinux
+#
+cd ~/AUR/Build
+#
+git clone https://aur.archlinux.org/dar.git
+# Cloning into 'dar'...
+# remote: Enumerating objects: 55, done.
+# remote: Counting objects: 100% (55/55), done.
+#remote: Compressing objects: 100% (47/47), done.
+# remote: Total 55 (delta 7), reused 55 (delta 7)
+# Unpacking objects: 100% (55/55), done.
+cd dar
+# (git)-[master]-%
+_now=$(date +"%Y%m%d%H:00")
+makepkg -si > /mnt/DATA/System/ArchLinux/Results/$_now._R997-03-makepkg-si-dar 2>&1
+####################################################################################################################################
+su paularchlinux
+#
+cd ~/AUR/Build
+#
+git clone https://aur.archlinux.org/inxi.git
+# Cloning into 'inxi'...
+# remote: Enumerating objects: 84, done.
+# remote: Counting objects: 100% (84/84), done.
+# remote: Compressing objects: 100% (59/59), done.
+# remote: Total 84 (delta 25), reused 84 (delta 25)
+# Unpacking objects: 100% (84/84), done.
+cd inxi
+# (git)-[master]-%
+_now=$(date +"%Y%m%d%H:00")
+makepkg -si > /mnt/DATA/System/ArchLinux/Results/$_now._R997-04-makepkg-si-inxi 2>&1
+####################################################################################################################################
+su paularchlinux
+#
+cd ~/AUR/Build
+#
+git clone https://aur.archlinux.org/qdirstat.git
+# Cloning into 'qdirstat'...
+# remote: Enumerating objects: 47, done.
+# remote: Counting objects: 100% (47/47), done.
+# remote: Compressing objects: 100% (44/44), done.
+# remote: Total 47 (delta 2), reused 47 (delta 2)
+# Unpacking objects: 100% (47/47), done.
+cd qdirstat
+# (git)-[master]-%
+_now=$(date +"%Y%m%d%H:00")
+makepkg -si > /mnt/DATA/System/ArchLinux/Results/$_now._R997-05-makepkg-si-qdirstat 2>&1
+####################################################################################################################################
+su paularchlinux
+#
+cd ~/AUR/Build
+#
+git clone https://aur.archlinux.org/imagewriter.git
+# Cloning into 'imagewriter'...
+# remote: Enumerating objects: 44, done.
+# remote: Counting objects: 100% (44/44), done.
+# remote: Compressing objects: 100% (38/38), done.
+# remote: Total 44 (delta 6), reused 44 (delta 6)
+# Unpacking objects: 100% (44/44), done.
+cd imagewriter
+# (git)-[master]-%
+_now=$(date +"%Y%m%d%H:00")
+makepkg -si > /mnt/DATA/System/ArchLinux/Results/$_now._R997-06makepkg-si-imagewriter 2>&1
+####################################################################################################################################
+su paularchlinux
+#
+cd ~/AUR/Build
+#
+git clone https://aur.archlinux.org/rclone-browser.git
+# Cloning into 'rclone-browser'...
+# remote: Enumerating objects: 18, done.
+# remote: Counting objects: 100% (18/18), done.
+# remote: Compressing objects: 100% (17/17), done.
+# remote: Total 18 (delta 0), reused 18 (delta 0)
+# Unpacking objects: 100% (18/18), done.
+cd rclone-browser
+# (git)-[master]-%
+_now=$(date +"%Y%m%d%H:00")
+makepkg -si > /mnt/DATA/System/ArchLinux/Results/$_now._R997-07makepkg-si-rclone-browser 2>&1
+####################################################################################################################################
+su paularchlinux
+#
+cd ~/AUR/Build
+#
+git clone https://aur.archlinux.org/google-earth-pro.git
+# Cloning into 'google-earth-pro'...
+# remote: Enumerating objects: 110, done.
+# remote: Counting objects: 100% (110/110), done.
+# remote: Compressing objects: 100% (78/78), done.
+# remote: Total 110 (delta 33), reused 108 (delta 32)
+# Receiving objects: 100% (110/110), 33.23 KiB | 6.65 MiB/s, done.
+# Resolving deltas: 100% (33/33), done.
+cd google-earth-pro
+# (git)-[master]-%
+_now=$(date +"%Y%m%d%H:00")
+makepkg -si > /mnt/DATA/System/ArchLinux/Results/$_now._R997-08makepkg-si-google-earth-pro 2>&1
+####################################################################################################################################
+su paularchlinux
+#
+cd ~/AUR/Build
+#
+git clone https://aur.archlinux.org/android-studio.git
+# Cloning into 'android-studio'...
+# remote: Enumerating objects: 147, done.
+# remote: Counting objects: 100% (147/147), done.
+# remote: Compressing objects: 100% (109/109), done.
+# remote: Total 147 (delta 38), reused 145 (delta 38)
+# Receiving objects: 100% (147/147), 40.24 KiB | 132.00 KiB/s, done.
+# Resolving deltas: 100% (38/38), done.
+cd android-studio
+# (git)-[master]-%
+_now=$(date +"%Y%m%d%H:00")
+makepkg -si > /mnt/DATA/System/ArchLinux/Results/$_now._R997-09makepkg-si-android-studio 2>&1
+####################################################################################################################################
+su paularchlinux
+#
+cd ~/AUR/Build
+#
+git clone https://aur.archlinux.org/skypeforlinux-preview-bin.git
+# Cloning into 'skypeforlinux-preview-bin'...
+# remote: Enumerating objects: 449, done.
+# remote: Counting objects: 100% (449/449), done.
+# remote: Compressing objects: 100% (268/268), done.
+# remote: Total 449 (delta 180), reused 446 (delta 180)
+# Receiving objects: 100% (449/449), 69.50 KiB | 226.00 KiB/s, done.
+# Resolving deltas: 100% (180/180), done.
+cd skypeforlinux-preview-bin
+# (git)-[master]-%
+_now=$(date +"%Y%m%d%H:00")
+makepkg -si > /mnt/DATA/System/ArchLinux/Results/$_now._R997-10makepkg-si-skypeforlinux 2>&1
+####################################################################################################################################
+su paularchlinux
+#
+cd ~
+#
+cd AUR/Build
+#
+git clone https://aur.archlinux.org/ncurses5-compat-libs.git
+# Cloning into 'ncurses5-compat-libs'...
+# remote: Enumerating objects: 56, done.
+# remote: Counting objects: 100% (56/56), done.
+# remote: Compressing objects: 100% (49/49), done.
+# remote: Total 56 (delta 5), reused 56 (delta 5)
+# Unpacking objects: 100% (56/56), done.
+cd ncurses5-compat-libs
+# (git)-[master]-%
+_now=$(date +"%Y%m%d%H:00")
+makepkg -si --skippgpcheck > /mnt/DATA/System/ArchLinux/Results/$_now._R997-11makepkg-si-ncurses5-compat-libs 2>&1
+####################################################################################################################################
+su paularchlinux
+#
+cd ~
+#
+cd AUR/Build
+#
+git clone https://aur.archlinux.org/vmware-workstation.git
+# Cloning into 'vmware-workstation'...
+# remote: Enumerating objects: 350, done.
+# remote: Counting objects: 100% (350/350), done.
+# remote: Compressing objects: 100% (164/164), done.
+# remote: Total 350 (delta 206), reused 328 (delta 185)
+# Receiving objects: 100% (350/350), 188.64 KiB | 313.00 KiB/s, done.
+# Resolving deltas: 100% (206/206), done.
+cd vmware-workstation
+# (git)-[master]-%
+_now=$(date +"%Y%m%d%H:00")
+makepkg -si > /mnt/DATA/System/ArchLinux/Results/$_now._R997-12makepkg-si-vmware-workstation 2>&1
+####################################################################################################################################
+su paularchlinux
+#
+cd ~
+#
+cd AUR/Build
+#
+git clone https://aur.archlinux.org/shiboken.git
+# Cloning into 'shiboken'...
+# remote: Enumerating objects: 5, done.
+# remote: Counting objects: 100% (5/5), done.
+# remote: Compressing objects: 100% (5/5), done.
+# remote: Total 5 (delta 0), reused 5 (delta 0)
+# Unpacking objects: 100% (5/5), done.
+cd shiboken
+# (git)-[master]-%
+_now=$(date +"%Y%m%d%H:00")
+makepkg -si > /mnt/DATA/System/ArchLinux/Results/$_now._R997-12-makepkg-si-shiboken 2>&1
+####################################################################################################################################
+su paularchlinux
+#
+cd ~/AUR/Build
+#
+git clone https://aur.archlinux.org/perl-cpanel-json-xs.git
+# Cloning into 'perl-cpanel-json-xs'...
+# remote: Enumerating objects: 33, done.
+# remote: Counting objects: 100% (33/33), done.
+# remote: Compressing objects: 100% (26/26), done.
+# remote: Total 33 (delta 8), reused 32 (delta 7)
+# Unpacking objects: 100% (33/33), done.
+cd perl-cpanel-json-xs
+# (git)-[master]-%
+_now=$(date +"%Y%m%d%H:00")
+makepkg -si > /mnt/DATA/System/ArchLinux/Results/$_now._R997-13-makepkg-si-perl-cpanel-json-xs 2>&1
+####################################################################################################################################
+su paularchlinux
+#
+cd ~/AUR/Build
+#
+git clone https://aur.archlinux.org/perl-xml-dumper.git
+# Cloning into 'perl-xml-dumper'...
+# remote: Enumerating objects: 12, done.
+# remote: Counting objects: 100% (12/12), done.
+# remote: Compressing objects: 100% (12/12), done.
+# remote: Total 12 (delta 0), reused 12 (delta 0)
+# Unpacking objects: 100% (12/12), done.
+cd perl-xml-dumper
+# (git)-[master]-%
+_now=$(date +"%Y%m%d%H:00")
+makepkg -si > /mnt/DATA/System/ArchLinux/Results/$_now._R997-14-makepkg-si-perl-xml-dumper 2>&1
+####################################################################################################################################
+su paularchlinux
+#
+cd ~/AUR/Build
+#
+git clone https://aur.archlinux.org/perl-authen-pam.git
+# Cloning into 'perl-authen-pam'...
+# remote: Enumerating objects: 22, done.
+# remote: Counting objects: 100% (22/22), done.
+# remote: Compressing objects: 100% (21/21), done.
+# remote: Total 22 (delta 0), reused 22 (delta 0)
+# Unpacking objects: 100% (22/22), done.
+cd perl-authen-pam
+# (git)-[master]-%
+_now=$(date +"%Y%m%d%H:00")
+makepkg -si > /mnt/DATA/System/ArchLinux/Results/$_now._R997-15-makepkg-si-perl-authen-pam 2>&1
+####################################################################################################################################
+su paularchlinux
+#
+cd ~/AUR/Build
+#
+git clone https://aur.archlinux.org/perl-encode-detect.git
+# Cloning into 'perl-encode-detect'...
+# remote: Enumerating objects: 22, done.
+# remote: Counting objects: 100% (22/22), done.
+# remote: Compressing objects: 100% (21/21), done.
+# remote: Total 22 (delta 1), reused 21 (delta 0)
+# Unpacking objects: 100% (22/22), done.
+cd perl-encode-detect
+#
+# (git)-[master]-%
+_now=$(date +"%Y%m%d%H:00")
+makepkg -si > /mnt/DATA/System/ArchLinux/Results/$_now._R997-16-makepkg-si-perl-encode-detect 2>&1
+####################################################################################################################################
+su paularchlinux
+#
+cd ~/AUR/Build
+#
+git clone https://aur.archlinux.org/splunkforwarder.git
+# Cloning into 'splunkforwarder'...
+# remote: Enumerating objects: 127, done.
+# remote: Counting objects: 100% (127/127), done.
+# remote: Compressing objects: 100% (83/83), done.
+# remote: Total 127 (delta 44), reused 127 (delta 44)
+# Receiving objects: 100% (127/127), 28.96 KiB | 5.79 MiB/s, done.
+# Resolving deltas: 100% (44/44), done.
+cd splunkforwarder
+# (git)-[master]-%
+_now=$(date +"%Y%m%d%H:00")
+makepkg -si > /mnt/DATA/System/ArchLinux/Results/$_now._R997-18-makepkg-si-splunkforwarder 2>&1
+####################################################################################################################################
+su paularchlinux
+#
+cd ~/AUR/Build
+#
+git clone https://aur.archlinux.org/kubernetes.git
+# Cloning into 'kubernetes'...
+# remote: Enumerating objects: 270, done.
+# remote: Counting objects: 100% (270/270), done.
+# remote: Compressing objects: 100% (178/178), done.
+# remote: Total 270 (delta 92), reused 270 (delta 92)
+# Receiving objects: 100% (270/270), 55.41 KiB | 180.00 KiB/s, done.
+# Resolving deltas: 100% (92/92), done.
+cd kubernetes
+# (git)-[master]-%
+_now=$(date +"%Y%m%d%H:00")
+makepkg -si > /mnt/DATA/System/ArchLinux/Results/$_now._R997-19-makepkg-si-kubernetes 2>&1
+####################################################################################################################################
+su paularchlinux
+#
+cd ~/AUR/Build
+#
+git clone https://aur.archlinux.org/webmin.git
+# Cloning into 'webmin'...
+# remote: Enumerating objects: 158, done.
+# remote: Counting objects: 100% (158/158), done.
+# remote: Compressing objects: 100% (89/89), done.
+# remote: Total 158 (delta 67), reused 156 (delta 67)
+# Receiving objects: 100% (158/158), 78.08 KiB | 253.00 KiB/s, done.
+# Resolving deltas: 100% (67/67), done.
+cd webmin
+# (git)-[master]-%
+_now=$(date +"%Y%m%d%H:00")
+makepkg -si > /mnt/DATA/System/ArchLinux/Results/$_now._R997-20-makepkg-si-webmin 2>&1
+####################################################################################################################################
+su paularchlinux
+#
+cd ~/AUR/Build
+#
+git clone https://aur.archlinux.org/veeam.git
+# Cloning into 'veeam'...
+# remote: Enumerating objects: 9, done.
+# remote: Counting objects: 100% (9/9), done.
+# remote: Compressing objects: 100% (7/7), done.
+# remote: Total 9 (delta 2), reused 9 (delta 2)
+# Unpacking objects: 100% (9/9), done.
+cd veeam
+# (git)-[master]-%
+makepkg -si > /mnt/DATA/System/ArchLinux/Results/$_now._R997-21-makepkg-si-veeam 2>&1
+####################################################################################################################################
+su paularchlinux
+#
+cd ~/AUR/Build
+#
+git clone https://aur.archlinux.org/veeamsnap.git
+# Cloning into 'veeamsnap'...
+# remote: Enumerating objects: 6, done.
+# remote: Counting objects: 100% (6/6), done.
+# remote: Compressing objects: 100% (6/6), done.
+# remote: Total 6 (delta 0), reused 5 (delta 0)
+# Unpacking objects: 100% (6/6), done.
+_now=$(date +"%Y%m%d%H:00")
+makepkg -si > /mnt/DATA/System/ArchLinux/Results/$_now._R997-22-makepkg-si-veeamsnap 2>&1
+
+####################################################################################################################################
+

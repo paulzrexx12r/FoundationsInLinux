@@ -1,0 +1,57 @@
+_now=$(date +"%Y%m%d%H:00")
+#
+echo 'y' | pacman -S libdbusmenu-qt4  qtav  qtcreator  qtcurve-gtk2  qtcurve-utils  qterminal  qtermwidget  qt-gstreamer  qtikz  qtile  \
+                     qtkeychain  qtox  qtpass  qtractor  qtspell  qt4  qtcurve-qt4  qt5-base  qt5-declarative  qt5-canvas3d  \
+                     qt5-graphicaleffects  qt5-imageformats  qt5-location  qt5-multimedia  qt5-quickcontrols  qt5-quickcontrols2  qt5-script  \
+                     qt5-sensors  qt5-speech  qt5-svg  qt5-tools  qt5-virtualkeyboard  qt5-webchannel  qt5-webkit  qt5-x11extras  \
+                     qt5-xmlpatterns  qt5-websockets  qt5-webengine  qt5-datavis3d  qt5-scxml  qt5-3d  qt5-charts  qt5-serialport  \
+                     qt5-connectivity  qt5-networkauth  qt5-xcb-private-headers  qt5-remoteobjects  qt5ct  qt5-serialbus  qt5-serialport  \
+                     qtcurve-qt5  qt5-styleplugins  qt5-doc  qt5-examples  qt5-systems  qt5-feedback  qt5-gamepad  qt5-translations  \
+                     qt5-gsettings  qt5-wayland  qt5-webglplugin  qt5-multimedia  qt5pas  qt5-webview  sni-qt  \
+                     --needed \
+                     > /mnt/DATA/System/ArchLinux/Packages/$_now._11viidevelopment-qt 2>&1
+####################################################################################################################################
+qt-at-spi  # [NOT FOUND]
+
+qt1  # [NOT FOUND]
+
+qtspim # [NOT FOUND]
+
+qt5-virtualkeyboard # [NOT FOUND]
+
+qt5gtk2 # [NOT FOUND]
+************************************************************************************************************************************
+# QT - INFORMATION
+
+
+:: Running post-transaction hooks...
+(1/7) Updating icon theme caches...
+(2/7) Reloading system manager configuration...
+(3/7) Creating system user accounts...
+(4/7) Arming ConditionNeedsUpdate...
+(5/7) Updating the info directory file...
+(6/7) Updating the desktop file MIME type cache...
+(7/7) Updating the MIME type database...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,36 @@
+_now=$(date +"%Y%m%d%H:00")
+#
+echo 'y' | pacman -S ruby  ruby-bundler  ruby2.5  ruby2.5-bundler  ruby-native-package-installer  ruby-addressable  ruby-async  ruby-async-dns  \
+                     ruby-async-io  ruby-atk  ruby-augeas  ruby-cairo  ruby-cairo-gobject  ruby-colorator  ruby-colorize  ruby-daemons  \
+                     ruby-dbus  ruby-diff-lcs  ruby-docs  ruby-em-proxy  ruby-eventmachine  ruby-faraday  ruby-faraday-middleware  ruby-ffi  \
+                     ruby-forwardable-extended  ruby-gdk_pixbuf2  rubygems  ruby-gio2  ruby-glib2  ruby-gobject-introspection  \
+                     ruby-gpgme  ruby-gtk2  ruby-hitimes  ruby-hpricot  ruby-iconv  ruby-irb  ruby-jekyll-sass-converter  ruby-kramdown  \
+                     ruby-mail  ruby-mail-gpg  ruby-manpages  ruby-marisa  ruby-maruku  ruby-mercenary  ruby-mime-types  ruby-mime-types-data  \
+                     ruby-mini_mime  ruby-mini_portile2  ruby-msgpack  ruby-multi_json  ruby-multipart-post  ruby-mustache  ruby-nats-pure  \
+                     ruby-ncurses  ruby-net-dns  ruby-net-ping  ruby-network_interface  ruby-nio4r  ruby-packetfu  ruby-paint  ruby-pango  \
+                     ruby-pathutil  ruby-pcaprub  ruby-pg  ruby-pkg-config  ruby-polyglot  ruby-power_assert  ruby-public_suffix  ruby-rack  \
+                     ruby-rack-protection  ruby-rainbow  ruby-rake  ruby-rb-inotify  ruby-rdiscount  ruby-rdoc  ruby-ronn  ruby-rouge  \
+                     ruby-rspec  ruby-rspec-core  ruby-rspec-expectations  ruby-rspec-mocks  ruby-rspec-support  ruby-rubydns  ruby-safe_yaml  \
+                     ruby-sass  ruby-sass-listen  ruby-semantic_puppet  ruby-shadow  ruby-stomp  ruby-sys-proctable  ruby-term-ansicolor  \
+                     ruby-test-unit  ruby-thin  ruby-thor  ruby-tilt  ruby-timers  ruby-tins  ruby-titlecase  ruby-treetop  ruby-trollop  \
+                     ruby-unicorn-engine  ruby-yard  jruby  \ ruby ruby-shadow
+                     --needed  \
+                     > /mnt/DATA/System/ArchLinux/Packages/$_now._11iiidevelopment-ruby 2>&1
+####################################################################################################################################
+ruby-ethon # [NOT FOUND]
+
+ruby-hashie # [NOT FOUND]
+
+ruby-json  # [NOT FOUND]
+
+ruby-kwalify # [NOT FOUND]
+
+ruby-osdn-cli # [NOT FOUND]
+
+ruby-osdn-client # [NOT FOUND]
+
+ruby-typhoeus # [NOT FOUND]
+************************************************************************************************************************************
+# DEVELOPMENT-RUBY - INFORMATION
+:: Running post-transaction hooks...
+(1/1) Arming ConditionNeedsUpdate...

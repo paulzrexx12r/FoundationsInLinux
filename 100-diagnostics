@@ -1,0 +1,163 @@
+hwinfo categories: [Get list from hwinfo --help]
+        all, arch, bios, block, bluetooth, braille, bridge, camera, cdrom, chipcard, cpu, disk, dsl, dvb, fingerprint, floppy, framebuffer, gfxcard,
+        hub, ide, isapnp, isdn, joystick, keyboard, memory, mmc-ctrl, modem, monitor, mouse, netcard, network, partition, pci, pcmcia, pcmcia-ctrl,
+        pppoe, printer, redasd, reallyall, scanner, scsi, smp, sound, storage-ctrl, sys, tape, tv, uml, usb, usb-ctrl, vbe, wlan, xen, zip
+#
+#
+inxi categories: [Get list from inxi --help]
+        --audio, --basic, --battery,--cpu, --disk-full, --optical, --disk, --flags, --graphics, --ip, --info, --label, --memory, --machine,
+        --network-advanced, --network, --unmounted, --partitions-full, --partitions, --repos, --raid, --sensors, --slots, --system, --processes,
+        --usb, --uuid
+#
+#
+lshw categories: [Get list from lshw -short or lshw -businfo command]
+        bus, bridge, communication, disk, display, input, memory, multimedia, network, processor, storage, system, volume
+#
+#
+dmidecode categories: [Get list from dmidecode -t]
+        bios system baseboard chassis processor memory cache connector slot
+#
+HARDWARE
+    COMPLETE
+#
+hwinfo > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/hwinfo 2>&1
+#
+inxi -Fdflmopruxxx > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/inxi-Fdflmopruxxx 2>&1
+#
+inxi -v8 > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/inxi-v8 2>&1
+#
+lshw > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/lshw 2>&1
+#
+dmidecode > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/dmidecode 2>&1
+#
+HARDWARE
+    BIOS/UEFI
+#
+hwinfo --bios > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/hwinfo--bios 2>&1
+#
+inxi -Mxxx > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/inxi-Mxxx 2>&1
+#
+dmidecode -t bios > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/dmidecode-t-bios 2>&1
+#
+HARDWARE
+    CPU
+#
+hwinfo --cpu > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/hwinfo--cpu 2>&1
+#
+inxi -Cxxx > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/inxi-Cxxx 2>&1
+#
+lshw -c processor > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/lshw-c-processor 2>&1
+#
+dmidecode -t processor > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/dmidecode-t-processor 2>&1
+#
+lscpu > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/lscpu 2>&1
+#
+HARDWARE
+    MEMORY
+#
+hwinfo --memory > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/hwinfo--memory 2>&1
+#
+inxi -mxxx  > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/inxi-mxxx 2>&1
+#
+lshw -c memory > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/lshw-c-memory 2>&1
+#
+dmidecode -t memory > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/dmidecode-t-memory 2>&1
+#
+free -th  > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/free-th 2>&1
+#
+HARDWARE
+   DISK-DRIVES
+#
+hwinfo --disk > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/hwinfo--disk 2>&1
+#
+hwinfo --partition > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/hwinfo--partition 2>&1
+#
+hwinfo --storage-ctrl > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/hwinfo--storage-ctrl 2>&1
+#
+hwinfo --cdrom > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/hwinfo--cdrom 2>&1
+#
+inxi -dxxx > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/inxi-dxxx 2>&1
+#
+inxi -pxxx > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/inxi-pxxx 2>&1
+#
+lshw -c disk > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/lshw-c-disk 2>&1
+#
+lshw -c storage  > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/lshw-c-storage 2>&1
+#
+HARDWARE
+   INTERFACES-PCI
+#
+hwinfo --pci > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/hwinfo--pci 2>&1
+#
+lspci > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/lspci 2>&1
+#
+lspci -v > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/lspci-v 2>&1
+#
+HARDWARE
+   INTERFACES-USB
+#
+hwinfo --usb > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/hwinfo--usb 2>&1
+#
+lsusb > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/lsusb 2>&1
+#
+lsusb -v > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/lsusb-v 2>&1
+#
+HARDWARE
+    NETWORK
+#
+hwinfo --netcard > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/hwinfo--netcard 2>&1
+#
+hwinfo --wlan  > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/hwinfo--wlan 2>&1
+#
+hwinfo --bluetooth  > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/hwinfo--bluetooth 2>&1
+
+hwinfo --network > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/hwinfo--network 2>&1
+#
+HARDWARE
+    GRAPHICS CARD(S)
+#
+hwinfo --gfxcard > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/hwinfo--gfxcard 2>&1
+#
+inxi -Gxxx > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/inxi-Gxxx 2>&1
+#
+lshw -c display > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/lshw-c-display 2>&1
+#
+HARDWARE
+    MONITOR
+#
+hwinfo --monitor > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/hwinfo--monitor 2>&1
+#
+HARDWARE
+    KEYBOARD
+hwinfo --keyboard > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/hwinfo--keyboard 2>&1
+#
+
+HARDWARE
+    MOUSE
+#
+hwinfo --mouse > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/hwinfo--mouse 2>&1
+#
+HARDWARE
+    MULTIMEDIA
+#
+hwinfo --sound > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/hwinfo--sound 2>&1
+#
+lshw -c multimedia > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/lshw-c-multimedia 2>&1
+#
+
+CONFIGURATION
+    STORAGE
+#
+blkid > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/blkid 2>&1
+#
+mount > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/mount 2>&1
+#
+lsblk > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/lsblk 2>&1
+#
+CONFIGURATION
+    SOFTWARE
+#
+uname -a
+# Linux Ono-Sendai-ArchLinux-CLI.Tessier-Ashpool 4.17.6-1-hardened #1 SMP PREEMPT Thu Jul 12 11:39:44 CEST 2018 x86_64 GNU/Linux
+#
+lsmod > /mnt/DATA/System/ArchLinux-CLI/Diagnostics/lsmod 2>&1

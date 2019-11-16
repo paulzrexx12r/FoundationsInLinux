@@ -1,0 +1,32 @@
+_now=$(date +"%Y%m%d%H:00")
+#
+echo 'y' | pacman -S python pyalpm python-pyelftools python-dbus-common python-six python-retrying python-msgpack python-appdirs \
+                     python-pyparsing python-packaging python-setuptools python-urllib3 python-pysocks python-idna python-chardet \
+                     python-requests python-cachecontrol python-lockfile python-colorama python-distlib \
+                     python-distro python-webencodings python-html5lib python-progress python-pep517 python-pytoml python-pip python-lxml \
+                     python-beautifulsoup4 python-cssselect python-genshi mpdecimal python-pygments python-docutils python-markdown \
+                     python-pyasn1 python-rsa python-yaml python-future python-requests-file python-tldextract python-click \
+                     python-prettytable python-wcwidth python-prompt_toolkit python-ptable python-softlayer python-dateutil python-jmespath \
+                     python-botocore python-s3transfer python-boto3 python-pynamecheap python-pysimplesoap python-cached-property \
+                     python-defusedxml python-isodate python-pytz python-requests-toolbelt python-attrs python-zeep \
+                     python-numpy python-nose python-structlog python-tornado python-pycurl python-zope-interface python-constantly \
+                     python-automat python-hyperlink python-pyhamcrest python-twisted python-ply python-pycparser python-cffi \
+                     python-asn1crypto python-cryptography python-pyopenssl python-pyasn1-modules python-service-identity python-hpack \
+                     python-hyperframe python-h2 python-priority python-pyserial python-passlib python-fastpbkdf2 python-bcrypt python-scrypt \
+                     python-netaddr python-decorator python-traitlets python-ptyprocess python-pexpect python-pickleshare python-parso \
+                     python-jedi ipython python-systemd python-xmltodict python-pywinrm python-ntlm-auth python-requests-ntlm python-pykerberos \
+                     python-requests-kerberos python-requests-credssp python-dnspython python-ovirt-engine-sdk python-gobject python-dbus \
+                     python-babel python-imagesize python-markupsafe python-jinja python-snowballstemmer python-pystemmer \
+                     python-sphinx-alabaster-theme python-sphinx_rtd_theme python-sphinxcontrib-websupport python-sqlalchemy python-psycopg2 \
+                     python-whoosh python-sphinx python-pynacl python-paramiko python-pyudev pygobject2-devel python-gobject2 python-evdev \
+                     python-ecdsa  python-pycryptodome  python-localzone  python-xdg  python-pyside2  \
+                     --needed \
+                     > /mnt/DATA/System/ArchLinux/Packages/$_now._11iidevelopment-python3 2>&1
+
+pacman -S --needed --noconfirm python > /mnt/DATA/System/ArchLinux/Packages/008-001-python 2>&1
+
+************************************************************************************************************************************
+# PYTHON3 - OPTIONAL INFROMATION
+:: Running post-transaction hooks...
+(1/2) Arming ConditionNeedsUpdate...
+(2/2) Updating the desktop file MIME type cache...

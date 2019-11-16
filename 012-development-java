@@ -1,0 +1,41 @@
+_now=$(date +"%Y%m%d%H:00")
+#
+echo 'y' | pacman -S jre10-openjdk-headless java-rhino giflib jre10-openjdk hicolor-icon-theme jdk10-openjdk openjdk10-src \
+                     jre8-openjdk-headless xorg-xset xdg-utils jre8-openjdk jdk8-openjdk icedtea-web java-jline rhino java-environment-common \
+                     geoclue2  webkit2gtk  woff2  java-openjfx  java-runtime-common
+
+####################################################################################################################################
+************************************************************************************************************************************
+# JAVA - INFORMATION
+jre8-openjdk-headless...
+Default Java environment is already set to 'java-10-openjdk'
+See 'archlinux-java help' to change it
+
+jre8-openjdk...
+Default Java environment is already set to 'java-10-openjdk'
+See 'archlinux-java help' to change it
+when you use a non-reparenting window manager,
+set _JAVA_AWT_WM_NONREPARENTING=1 in /etc/profile.d/jre.sh
+
+jdk8-openjdk...
+Default Java environment is already set to 'java-10-openjdk'
+See 'archlinux-java help' to change it
+installing icedtea-web...
+
+upgrading geoclue2...
+
+:: Running post-transaction hooks...
+(1/3) Reloading system manager configuration...
+(2/3) Arming ConditionNeedsUpdate...
+(3/3) Updating the desktop file MIME type cache...
+####################################################################################################################################
+archlinux-java status
+# Available Java environments:
+#   java-10-openjdk (default)
+#
+archlinux-java set java-10-openjdk
+#
+archlinux-java status
+# Available Java environments:
+#   java-10-openjdk (default)
+#   java-8-openjdk

@@ -1,0 +1,53 @@
+pacman -S --needed --noconfirm perl-error > /mnt/DATA/System/ArchLinux/Packages/010-001-perl-error 2>&1
+pacman -S --needed --noconfirm perl-timedate > /mnt/DATA/System/ArchLinux/Packages/010-002-perl-timedate 2>&1
+pacman -S --needed --noconfirm perl-mailtools > /mnt/DATA/System/ArchLinux/Packages/010-003-perl-mailtools 2>&1
+
+
+
+
+#
+echo 'y' | pacman -S perl perl-encode-locale perl-http-date perl-file-listing perl-html-tagset \
+                     perl-html-parser perl-lwp-mediatypes perl-uri perl-io-html perl-http-message perl-http-cookies perl-http-daemon \
+                     perl-http-negotiate perl-net-http perl-www-robotrules perl-try-tiny perl-locale-gettext perl-libwww perl-net-ssleay \
+                     perl-io-socket-ssl perl-lwp-protocol-https perl-term-readkey perl-convert-binhex perl-io-stringy perl-mime-tools \
+                     perl-net-smtp-ssl perl-authen-sasl perl-common-sense perl-types-serialiser perl-canary-stability perl-json-xs \
+                     perl-json perl-mediawiki-api perl-inc-latest perl-module-build perl-exporter-tiny perl-list-moreutils-xs \
+                     perl-list-moreutils perl-class-inspector perl-file-sharedir perl-math-round perl-class-factory-util perl-class-singleton \
+                     perl-module-runtime perl-module-implementation perl-params-validate perl-params-util perl-sub-install perl-data-optlist \
+                     perl-package-stash-xs perl-dist-checkconflicts perl-package-stash perl-test-fatal perl-sub-exporter \
+                     perl-sub-exporter-progressive perl-variable-magic perl-b-hooks-endofscope perl-namespace-clean perl-class-load \
+                     perl-list-someutils perl-list-utilsby perl-list-allutils perl-datetime-timezone perl-file-sharedir-install \
+                     perl-datetime-locale perl-sub-identify perl-namespace-autoclean perl-role-tiny perl-mro-compat perl-devel-stacktrace \
+                     perl-specio perl-eval-closure perl-class-data-inheritable perl-exception-class perl-params-validationcompiler \
+                     perl-datetime perl-sub-name perl-package-deprecationmanager perl-datetime-format-strptime perl-datetime-format-builder \
+                     perl-datetime-format-iso8601 perl-number-compare perl-text-glob perl-file-find-rule perl-test-pod \
+                     perl-cgi perl-socket6 perl-io-socket-inet6 perl-xml-parser perl-crypt-openssl-bignum perl-crypt-openssl-dsa \
+                     perl-crypt-openssl-random perl-crypt-openssl-rsa perl-digest-bubblebabble perl-digest-sha1 perl-digest-hmac \
+                     perl-mime-base32 perl-net-ip perl-net-dns perl-net-dns-sec tcl xcb-proto libxdmcp libxau libxcb libx11 libxext libxss \
+                     fontconfig libxrender libxft tk perl-tk libxt libxpm gd gdk-pixbuf2 libdatrie libthai pixman cairo pango libcroco \
+                     librsvg libxmu libxaw libdaemon avahi libcups jbig2dec run-parts libpaper ijs ghostscript gts gsfonts libidn \
+                     graphviz perl-file-which perl-io-tty perl-ipc-run perl-parse-recdescent perl-text-iconv perl-xml-twig \
+                     perl-xml-xpath perl-graphviz perl-dbi perl-dbd-mysql perl-autovivification perl-business-isbn-data perl-business-isbn \
+                     perl-tie-cycle perl-business-ismn perl-business-issn perl-data-compare perl-data-uniqid perl-file-slurper perl-ipc-run3 \
+                     perl-lingua-translit perl-log-log4perl perl-mozilla-ca perl-perlio-utf8-strict perl-sort-key perl-text-bibtex \
+                     perl-text-csv perl-text-roman perl-mime-charset perl-unicode-linebreak perl-xml-sax-base perl-xml-namespacesupport \
+                     perl-xml-sax perl-xml-libxml perl-class-accessor perl-data-dump perl-datetime-calendar-julian perl-io-string \
+                     perl-regexp-common perl-file-slurp-tiny perl-xml-libxml-simple perl-xml-libxslt perl-xml-writer perl-parse-yapp \
+                     perl-ipc-system-simple perl-file-basedir perl-file-desktopentry perl-file-mimeinfo perl-net-dbus perl-x11-protocol \
+                     gtk2  qt4 ocaml  r  xbitmaps  xterm
+                     --needed \
+                     > /mnt/DATA/System/ArchLinux/Packages/$_now._11iiidevelopment-perl 2>&1
+************************************************************************************************************************************
+# PERL - INFORMATION
+perl-convert-binhex...
+module test... pass.
+
+:: Running post-transaction hooks...
+(1/8) Warn about old perl modules
+(2/8) Updating fontconfig cache...
+(3/8) Updating TeXLive filename database...
+(4/8) Reloading system manager configuration...
+(5/8) Creating system user accounts...
+(6/8) Arming ConditionNeedsUpdate...
+(7/8) Updating the desktop file MIME type cache...
+(8/8) Updating X fontdir indices...

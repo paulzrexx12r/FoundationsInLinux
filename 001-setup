@@ -1,0 +1,61 @@
+systemctl start gpm.service
+#
+systemctl enable gpm.service
+Created symlink /etc/systemd/system/multi-user.target.wants/gpm.service → /usr/lib/systemd/system/gpm.service.
+#
+localectl set-locale LANG=en_AU.UTF-8
+#
+cp -v /etc/systemd/logind.conf /etc/systemd/logind.conf.org
+'/etc/systemd/logind.conf' -> '/etc/systemd/logind.conf.org'
+#
+sed -i -e 's/#NAutoVTs=6/NAutoVTs=11/' /etc/systemd/logind.conf
+sed -i -e 's/#ReserveVT=6/ReserveVT=1/' /etc/systemd/logind.conf
+#
+cp -v /etc/systemd/journald.conf /etc/systemd/journald.conf.org
+'/etc/systemd/journald.conf' -> '/etc/systemd/journald.conf.org'
+#
+sed -i -e 's/#ForwardToConsole=no/ForwardToConsole=yes/' /etc/systemd/journald.conf
+sed -i -e 's/#TTYPath=\/dev\/console/TTYPath=\/dev\/tty12/' /etc/systemd/journald.conf
+sed -i -e 's/#MaxLevelConsole=info/MaxLevelConsole=debug/' /etc/systemd/journald.conf
+#
+systemctl restart systemd-journald
+#
+cp -v /etc/systemd/timesyncd.conf /etc/systemd/timesyncd.conf.org
+'/etc/systemd/timesyncd.conf' -> '/etc/systemd/timesyncd.conf.org'
+#
+sed -i -e 's/#NTP=/NTP=oceania.pool.ntp.org/' /etc/systemd/timesyncd.conf
+sed -i -e 's/#FallbackNTP=0.arch.pool.ntp.org 1.arch.pool.ntp.org 2.arch.pool.ntp.org 3.arch.pool.ntp.org/FallbackNTP=0.arch.pool.ntp.org 1.arch.pool.ntp.org 2.arch.pool.ntp.org 3.arch.pool.ntp.org/' /etc/systemd/timesyncd.conf
+#
+timedatectl set-ntp true
+#
+systemctl restart systemd-timesyncd
+#
+timedatectl
+               Local time: Wed 2019-11-13 10:07:36 AEDT
+           Universal time: Tue 2019-11-12 23:07:36 UTC
+                 RTC time: Tue 2019-11-12 23:07:36
+                Time zone: Australia/Sydney (AEDT, +1100)
+System clock synchronized: no
+              NTP service: active
+          RTC in local TZ: no
+#
+
+#systemctl start snapper-timeline.timer
+#
+#systemctl enable snapper-timeline.timer
+# Created symlink /etc/systemd/system/timers.target.wants/snapper-timeline.timer -> /usr/lib/systemd/system/snapper-timeline.timer.
+#systemctl start snapper-cleanup.timer
+#
+#systemctl enable snapper-cleanup.timer
+# Created symlink /etc/systemd/system/timers.target.wants/snapper-cleanup.timer -> /usr/lib/systemd/system/snapper-cleanup.timer.
+#snapper -c root create-config /
+# Creating config failed (creating btrfs subvolume .snapshots failed since it already exists).
+#snapper list-configs
+# Config | Subvolume
+# -------+----------
+#snapper -c config list
+# The config 'root' does not exist. Likely snapper is not configured.
+# See 'man snapper' for further instructions.
+#cat > /etc/updatedb.conf << "EOF"
+#PRUNENAMES = ".snapshots"
+#EOF

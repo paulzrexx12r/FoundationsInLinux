@@ -1,0 +1,29 @@
+_now=$(date +"%Y%m%d%H:00")
+#
+echo 'y' | pacman -S php php-phpdbg freetds php-dblib php-sqlite php-pgsql php-odbc php-mongodb libsodium php-sodium php-intl aspell \
+                     php-pspell php-cgi php-xsl hunspell hspell libvoikko enchant php-enchant php-apcu php-apcu-bc php-embed php-memcache \
+                     libevent libmemcached php-memcached php-tidy c-client php-imap net-snmp php-snmp geoip-database geoip \
+                     geoip-database-extra php-geoip php-gd php-fpm apache jansson brotli uwsgi lynx php-apache \
+                     --needed \
+                     > /mnt/DATA/System/ArchLinux/Packages/$_now._11ivdevelopment-php 2>&1
+####################################################################################################################################
+php-mcrypt
+#  [NOT FOUND]
+************************************************************************************************************************************
+# PHP - INFORMATION
+php-mongodb...
+WARNING:
+When moving from 'php-mongo' to 'php-mongodb' keep into mind the extension''s api is not compatible
+
+php-memcache...
+
+    ==> PHP extension
+
+    A config file was stored under /etc/php/conf.d/. In order to use this
+    extension make sure to uncomment it from its config file.
+
+:: Running post-transaction hooks...
+(1/4) Reloading system manager configuration...
+(2/4) Creating system user accounts...
+(3/4) Creating temporary files...
+(4/4) Arming ConditionNeedsUpdate...
